@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects · Perdana Afrisandi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        darkBg: '#0B0F19',
+                        darkCard: '#111827',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-darkBg dark:text-slate-200 font-sans antialiased transition-colors duration-300 selection:bg-sky-500 selection:text-white">
+
+    <!-- TOP SYNTHETIC DATA NOTICE -->
+    <div class="bg-sky-500/10 border-b border-sky-500/20 px-4 py-2 text-center text-xs font-mono text-sky-700 dark:text-sky-300">
+        🛡️ <strong>100% Synthetic & Public Datasets:</strong> All projects, schemas, and metrics use simulated or public data to strictly protect enterprise confidentiality.
+    </div>
+
+    <!-- NAVBAR EXACTLY LIKE MBIILE.COM -->
+    <nav class="sticky top-0 w-full z-40 bg-white/90 dark:bg-darkBg/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                Perdana<span class="text-sky-500">.</span>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="../index.html#home" class="hover:text-sky-500 transition">Home</a>
+                <a href="../index.html#about" class="hover:text-sky-500 transition">About</a>
+                <a href="../index.html#skills" class="hover:text-sky-500 transition">Skills</a>
+                <a href="../projects/index.html" class="hover:text-sky-500 transition font-semibold text-sky-500">Projects</a>
+                <a href="../index.html#education" class="hover:text-sky-500 transition">Education</a>
+                <a href="../index.html#certifications" class="hover:text-sky-500 transition">Certifications</a>
+            </div>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleTheme()" class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-300 border border-slate-200 dark:border-slate-700 hover:border-sky-400 transition text-xs font-mono font-semibold" title="Switch Dark / Light Mode">
+                    <span id="themeIcon">☀️ Light</span>
+                </button>
+                <a href="../index.html#contact" class="px-4 py-2 rounded-xl bg-sky-500 text-slate-950 text-sm font-bold hover:bg-sky-400 transition">
+                    Let's Talk
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="mb-12">
+            <a href="../index.html" class="text-xs font-mono text-sky-500 hover:underline">← Back to Home</a>
+            <div class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold mt-4">Portfolio</div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mt-1">My Projects</h1>
+            <p class="text-slate-600 dark:text-slate-400 text-base mt-2 max-w-2xl">
+                Explore a curated selection of my work in business analysis, data quality reconciliation, SQL data modeling, and guardrailed Semi-AI business intelligence.
+            </p>
+        </div>
+
+        <div class="space-y-10">
+            
+            <article class="grid md:grid-cols-12 gap-8 bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-sky-500 transition shadow-sm hover:shadow-xl">
+                <div class="md:col-span-5">
+                    <!-- [UPLOAD GAMBAR DI SINI - CUSTOMER-360] -->
+                    <a href="customer-360/index.html" class="block overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" alt="Customer 360 Intelligence Platform | Semi-AI & 58-Attribute DQ" class="w-full h-60 object-cover hover:scale-105 transition duration-500">
+                    </a>
+                </div>
+                <div class="md:col-span-7 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="text-xs font-mono text-sky-500 font-bold mb-1">2026 · END-TO-END CASE STUDY</div>
+                        <a href="customer-360/index.html" class="hover:text-sky-500 transition">
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mb-2">Customer 360 Intelligence Platform | Semi-AI & 58-Attribute DQ</h2>
+                        </a>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Unifying fragmented omnichannel customer touchpoints into a validated 58-attribute Golden Record with a deterministic SQL + AI Assistant.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-4"><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">BigQuery SQL</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Python</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Streamlit</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">58-Attr Data Quality</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Entity Resolution</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Semi-AI Chatbot</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Customer 360</span></div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs font-mono text-slate-500">Sections: Overview · Data · Challenges · Walkthrough · Takeaways</span>
+                        <a href="customer-360/index.html" class="px-5 py-2.5 rounded-xl bg-sky-500 text-slate-950 font-bold text-xs font-mono hover:bg-sky-400 transition">
+                            Read Case Study Page →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="grid md:grid-cols-12 gap-8 bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-sky-500 transition shadow-sm hover:shadow-xl">
+                <div class="md:col-span-5">
+                    <!-- [UPLOAD GAMBAR DI SINI - PAYMENT-RECONCILIATION] -->
+                    <a href="payment-reconciliation/index.html" class="block overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80" alt="Payment Gateway Failure, Smart Routing & Settlement Reconciliation" class="w-full h-60 object-cover hover:scale-105 transition duration-500">
+                    </a>
+                </div>
+                <div class="md:col-span-7 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="text-xs font-mono text-sky-500 font-bold mb-1">2026 · END-TO-END CASE STUDY</div>
+                        <a href="payment-reconciliation/index.html" class="hover:text-sky-500 transition">
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mb-2">Payment Gateway Failure, Smart Routing & Settlement Reconciliation</h2>
+                        </a>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">End-to-end 3-way SQL reconciliation and smart failover routing simulation across checkout logs, payment gateway webhooks, and bank settlement files.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-4"><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">BigQuery SQL</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Fintech</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">3-Way Reconciliation</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Python</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Streamlit</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">MDR Cost Audit</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Smart Routing</span></div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs font-mono text-slate-500">Sections: Overview · Data · Challenges · Walkthrough · Takeaways</span>
+                        <a href="payment-reconciliation/index.html" class="px-5 py-2.5 rounded-xl bg-sky-500 text-slate-950 font-bold text-xs font-mono hover:bg-sky-400 transition">
+                            Read Case Study Page →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="grid md:grid-cols-12 gap-8 bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-sky-500 transition shadow-sm hover:shadow-xl">
+                <div class="md:col-span-5">
+                    <!-- [UPLOAD GAMBAR DI SINI - PROMO-CANNIBALIZATION] -->
+                    <a href="promo-cannibalization/index.html" class="block overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Omnichannel Promo Cannibalization & Margin Erosion Analytics" class="w-full h-60 object-cover hover:scale-105 transition duration-500">
+                    </a>
+                </div>
+                <div class="md:col-span-7 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="text-xs font-mono text-sky-500 font-bold mb-1">2026 · END-TO-END CASE STUDY</div>
+                        <a href="promo-cannibalization/index.html" class="hover:text-sky-500 transition">
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mb-2">Omnichannel Promo Cannibalization & Margin Erosion Analytics</h2>
+                        </a>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Evaluating baseline sales lift, sister-SKU cannibalization, and post-promo dip to eliminate margin-destructive retail promotions.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-4"><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">BigQuery SQL</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">FMCG & Retail</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Price Elasticity</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Python Statsmodels</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Looker Studio</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Margin Optimization</span></div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs font-mono text-slate-500">Sections: Overview · Data · Challenges · Walkthrough · Takeaways</span>
+                        <a href="promo-cannibalization/index.html" class="px-5 py-2.5 rounded-xl bg-sky-500 text-slate-950 font-bold text-xs font-mono hover:bg-sky-400 transition">
+                            Read Case Study Page →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="grid md:grid-cols-12 gap-8 bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-sky-500 transition shadow-sm hover:shadow-xl">
+                <div class="md:col-span-5">
+                    <!-- [UPLOAD GAMBAR DI SINI - TELECOM-REVENUE-ASSURANCE] -->
+                    <a href="telecom-revenue-assurance/index.html" class="block overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80" alt="Telecom Revenue Assurance & Cross-Layer DWH Control Tower" class="w-full h-60 object-cover hover:scale-105 transition duration-500">
+                    </a>
+                </div>
+                <div class="md:col-span-7 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="text-xs font-mono text-sky-500 font-bold mb-1">2026 · END-TO-END CASE STUDY</div>
+                        <a href="telecom-revenue-assurance/index.html" class="hover:text-sky-500 transition">
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mb-2">Telecom Revenue Assurance & Cross-Layer DWH Control Tower</h2>
+                        </a>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Automated 3-tier reconciliation across Network Usage (CDR), Billing Systems, and Cloud Data Warehouse (UDP) to detect revenue leakage.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-4"><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">BigQuery SQL</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Impala SQL</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Telecom</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Revenue Assurance</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Streamlit</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Data Quality</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">ETL Validation</span></div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs font-mono text-slate-500">Sections: Overview · Data · Challenges · Walkthrough · Takeaways</span>
+                        <a href="telecom-revenue-assurance/index.html" class="px-5 py-2.5 rounded-xl bg-sky-500 text-slate-950 font-bold text-xs font-mono hover:bg-sky-400 transition">
+                            Read Case Study Page →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="grid md:grid-cols-12 gap-8 bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-sky-500 transition shadow-sm hover:shadow-xl">
+                <div class="md:col-span-5">
+                    <!-- [UPLOAD GAMBAR DI SINI - B2B-CREDIT-RISK] -->
+                    <a href="b2b-credit-risk/index.html" class="block overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80" alt="B2B Credit Limit, DSO & Working Capital Risk Optimization" class="w-full h-60 object-cover hover:scale-105 transition duration-500">
+                    </a>
+                </div>
+                <div class="md:col-span-7 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="text-xs font-mono text-sky-500 font-bold mb-1">2026 · END-TO-END CASE STUDY</div>
+                        <a href="b2b-credit-risk/index.html" class="hover:text-sky-500 transition">
+                            <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mb-2">B2B Credit Limit, DSO & Working Capital Risk Optimization</h2>
+                        </a>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">Cohort roll-rate delinquency modeling and dynamic credit limit reallocation to unlock trapped working capital and prevent bad debt.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-4"><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">BigQuery SQL</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Banking & B2B</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Credit Risk</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">DSO & Working Capital</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Roll-Rate Matrix</span><span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">Python</span></div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs font-mono text-slate-500">Sections: Overview · Data · Challenges · Walkthrough · Takeaways</span>
+                        <a href="b2b-credit-risk/index.html" class="px-5 py-2.5 rounded-xl bg-sky-500 text-slate-950 font-bold text-xs font-mono hover:bg-sky-400 transition">
+                            Read Case Study Page →
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="mt-12 text-center">
+            <a href="../index.html" class="inline-block px-6 py-3 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-sm font-semibold hover:border-sky-400 transition">
+                ← Back to Home
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="py-16 px-6 border-t border-slate-200 dark:border-slate-800 text-center max-w-5xl mx-auto">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">Let's Talk</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl mx-auto mb-6">
+            Interested in collaborating on Business & Data Analysis, Data Quality Engineering, BigQuery/Impala SQL Modeling, or Semi-AI BI dashboards?
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <!-- GANTI LINK EMAIL, LINKEDIN, & GITHUB DI SINI -->
+            <a href="mailto:perdana.afrisandi@email.com" class="px-6 py-3 rounded-xl bg-sky-500 text-slate-950 font-bold text-sm hover:bg-sky-400 transition">
+                ✉️ Let's Talk via Email
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="px-6 py-3 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-sm font-semibold hover:border-sky-400 transition">
+                🔗 LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" class="px-6 py-3 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-sm font-semibold hover:border-sky-400 transition">
+                💻 GitHub
+            </a>
+        </div>
+        <div class="text-xs text-slate-500 font-mono">
+            © 2026 Perdana Afrisandi · Business · Data · Technology
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                if (icon) icon.textContent = '🌙 Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                if (icon) icon.textContent = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        (function initTheme() {
+            const saved = localStorage.getItem('theme');
+            const icon = document.getElementById('themeIcon');
+            if (saved === 'light') {
+                document.documentElement.classList.remove('dark');
+                if (icon) icon.textContent = '🌙 Dark';
+            }
+        })();
+    </script>
+</body>
+</html>

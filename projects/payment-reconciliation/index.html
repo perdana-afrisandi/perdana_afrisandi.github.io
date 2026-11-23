@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway Failure, Smart Routing & Settlement Reconciliation · Perdana Afrisandi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        darkBg: '#0B0F19',
+                        darkCard: '#111827',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-darkBg dark:text-slate-200 font-sans antialiased transition-colors duration-300 selection:bg-sky-500 selection:text-white">
+
+    <!-- TOP SYNTHETIC DATA NOTICE -->
+    <div class="bg-sky-500/10 border-b border-sky-500/20 px-4 py-2 text-center text-xs font-mono text-sky-700 dark:text-sky-300">
+        🛡️ <strong>100% Synthetic & Public Datasets:</strong> All projects, schemas, and metrics use simulated or public data to strictly protect enterprise confidentiality.
+    </div>
+
+    <!-- NAVBAR EXACTLY LIKE MBIILE.COM -->
+    <nav class="sticky top-0 w-full z-40 bg-white/90 dark:bg-darkBg/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../../index.html" class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                Perdana<span class="text-sky-500">.</span>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="../../index.html#home" class="hover:text-sky-500 transition">Home</a>
+                <a href="../../index.html#about" class="hover:text-sky-500 transition">About</a>
+                <a href="../../index.html#skills" class="hover:text-sky-500 transition">Skills</a>
+                <a href="../../projects/index.html" class="hover:text-sky-500 transition font-semibold text-sky-500">Projects</a>
+                <a href="../../index.html#education" class="hover:text-sky-500 transition">Education</a>
+                <a href="../../index.html#certifications" class="hover:text-sky-500 transition">Certifications</a>
+            </div>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleTheme()" class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-300 border border-slate-200 dark:border-slate-700 hover:border-sky-400 transition text-xs font-mono font-semibold" title="Switch Dark / Light Mode">
+                    <span id="themeIcon">☀️ Light</span>
+                </button>
+                <a href="../../index.html#contact" class="px-4 py-2 rounded-xl bg-sky-500 text-slate-950 text-sm font-bold hover:bg-sky-400 transition">
+                    Let's Talk
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="py-14 px-6 max-w-4xl mx-auto space-y-12">
+        <div class="flex items-center space-x-2 text-xs font-mono text-slate-500">
+            <a href="../../index.html" class="hover:text-sky-500">Home</a>
+            <span>/</span>
+            <a href="../index.html" class="hover:text-sky-500">Projects</a>
+            <span>/</span>
+            <span class="text-sky-500 font-semibold">payment-reconciliation</span>
+        </div>
+
+        <header class="space-y-4 border-b border-slate-200 dark:border-slate-800 pb-8">
+            <div class="text-xs font-mono text-sky-500 font-bold">2026 · PRODUCTION-SHAPED CASE STUDY</div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">Payment Gateway Failure, Smart Routing & Settlement Reconciliation</h1>
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">End-to-end 3-way SQL reconciliation and smart failover routing simulation across checkout logs, payment gateway webhooks, and bank settlement files.</p>
+            <div class="flex flex-wrap gap-2 pt-2"><span class="px-3 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-mono">BigQuery SQL</span><span class="px-3 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-mono">Fintech</span><span class="px-3 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-mono">3-Way Reconciliation</span><span class="px-3 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-mono">Python</span><span class="px-3 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-mono">Streamlit</span><span class="px-3 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-mono">MDR Cost Audit</span><span class="px-3 py-1 rounded-md bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-mono">Smart Routing</span></div>
+        </header>
+
+        <div class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 flex flex-wrap gap-4 text-xs font-mono">
+            <span class="text-slate-400 font-bold">ON THIS PAGE:</span>
+            <a href="#overview" class="text-sky-500 hover:underline">1. Overview</a>
+            <a href="#data" class="text-sky-500 hover:underline">2. Data & Schema</a>
+            <a href="#challenges" class="text-sky-500 hover:underline">3. Challenges (DQ)</a>
+            <a href="#walkthrough" class="text-sky-500 hover:underline">4. Walkthrough</a>
+            <a href="#takeaways" class="text-sky-500 hover:underline">5. Key Takeaways</a>
+        </div>
+
+        <div class="space-y-3">
+            <!-- [UPLOAD GAMBAR SCREENSHOT DASHBOARD DI SINI] -->
+            <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg bg-white dark:bg-darkCard p-3">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80" alt="Payment Gateway Failure, Smart Routing & Settlement Reconciliation Dashboard Screenshot" class="w-full h-80 sm:h-96 object-cover rounded-xl">
+                <div class="mt-3 px-2 flex justify-between items-center text-xs font-mono text-slate-500">
+                    <span>📸 Dashboard & Architecture Preview (100% Synthetic Data)</span>
+                    <span class="text-emerald-500 font-semibold">Verified SQL Pipeline</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="overview" class="space-y-4 pt-4">
+            <div class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">Section 01</div>
+            <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">1. Overview & Business Context</h2>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">High-volume digital platforms route payments (QRIS, Virtual Accounts, E-Wallets, Credit Cards) through 3 to 4 Payment Gateways (PGs). Two silent problems drain billions in value: (1) Peak-hour PG latency spikes cause customers to fail checkout and abandon their carts, and (2) Mismatches between internal order tables and T+2 bank settlement statements lead to uncollected funds and Merchant Discount Rate (MDR) overcharges.</p>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">This case study demonstrates how Data Quality engineering and commercial analytics work together to audit every rupiah from checkout click to bank settlement, while optimizing real-time gateway routing.</p>
+        </section>
+
+        <section id="data" class="space-y-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-mono uppercase tracking-widest text-indigo-500 font-bold">Section 02</div>
+            <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">2. Data Sources & Star Schema Modeling</h2>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">Built on a 500,000-row synthetic Fintech Payment Ecosystem dataset modeled in BigQuery:</p>
+            <ul class="list-disc list-inside space-y-2 text-sm text-slate-600 dark:text-slate-300 bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200 dark:border-slate-800 font-mono">
+                <li class="leading-relaxed">fact_checkout_attempts: Timestamped payment attempts, issuer bank, payment method, PG routed, latency_ms, and error codes.</li><li class="leading-relaxed">fact_pg_webhooks: Asynchronous callback logs from Payment Gateways A, B, and C (including simulated duplicate webhook retries).</li><li class="leading-relaxed">fact_bank_settlement_mutations: T+1 and T+2 net settled amounts and deducted MDR fees per transaction.</li><li class="leading-relaxed">dim_mdr_contract_rates: Official contracted fee percentages/flat rates per payment channel and gateway.</li>
+            </ul>
+        </section>
+
+        <section id="challenges" class="space-y-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-mono uppercase tracking-widest text-amber-500 font-bold">Section 03</div>
+            <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">3. Data Quality & Technical Challenges Solved</h2>
+            <ul class="list-disc list-inside space-y-3 text-slate-600 dark:text-slate-300 bg-amber-500/5 border border-amber-500/20 p-6 rounded-2xl">
+                <li class="leading-relaxed">Webhook Idempotency & Duplicates: Network retries generated multiple 'SUCCESS' webhook rows for a single order_id. Deduplicated using ROW_NUMBER() OVER(PARTITION BY trx_id ORDER BY callback_ts ASC).</li><li class="leading-relaxed">Midnight Cutoff Window Mismatches: Transactions occurring between 23:50 and 00:05 WIB often appeared on Day T in internal logs but Day T+1 in bank batch files. Solved via a rolling +/- 48-hour reconciliation window.</li><li class="leading-relaxed">Partial Refunds & Chargebacks: Separating true missing bank settlements from legitimate post-purchase partial refunds.</li>
+            </ul>
+        </section>
+
+        <section id="walkthrough" class="space-y-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-mono uppercase tracking-widest text-emerald-500 font-bold">Section 04</div>
+            <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">4. Analytical Walkthrough & SQL Implementation</h2>
+            <ul class="space-y-3 text-slate-600 dark:text-slate-300 bg-white dark:bg-darkCard p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                <li class="leading-relaxed">Step 1 — 3-Way Automated SQL Reconciliation: Cross-matched internal 'SUCCESS' orders against PG callbacks and bank settlement mutations to isolate Unsettled T+3 exposures and MDR contract overcharges.</li><li class="leading-relaxed">Step 2 — Peak-Hour Failure Root-Cause Analysis: Segmented payment authorization rates by Hour of Day, Payment Method, Issuer Bank, and PG Provider.</li><li class="leading-relaxed">Step 3 — Smart Failover Routing Simulation: Modeled the net GMV saved vs. incremental MDR cost if traffic automatically switches to a backup PG whenever 5-minute timeout rates exceed 5%.</li>
+            </ul>
+            <div class="p-5 rounded-2xl bg-slate-900 text-slate-200 font-mono text-xs overflow-x-auto border border-slate-800 mt-4">
+                <div class="text-sky-400 font-bold mb-2">-- Production SQL Validation & Analytical Query</div>
+                <pre class="whitespace-pre-wrap leading-relaxed text-slate-300">SELECT w.pg_provider, w.payment_method,
+       COUNT(w.trx_id) AS verified_success_trx,
+       COUNT(s.settlement_id) AS bank_settled_trx,
+       SUM(w.gross_amount_idr - COALESCE(s.settled_gross_idr, 0)) AS unsettled_cash_exposure_idr,
+       SUM(s.charged_mdr_fee_idr - ROUND(w.gross_amount_idr * r.contract_mdr_pct, 2)) AS mdr_overcharge_variance_idr
+FROM `synth_fintech.vw_dedup_webhooks` w
+LEFT JOIN `synth_fintech.fact_bank_settlements` s ON w.trx_id = s.trx_id
+JOIN `synth_fintech.dim_mdr_contract_rates` r 
+  ON w.pg_provider = r.pg_provider AND w.payment_method = r.payment_method
+GROUP BY 1, 2;</pre>
+            </div>
+        </section>
+
+        <section id="takeaways" class="space-y-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="text-xs font-mono uppercase tracking-widest text-rose-500 font-bold">Section 05</div>
+            <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white">5. Key Takeaways & Quantified Business Impact</h2>
+            <div class="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 space-y-3 text-slate-800 dark:text-slate-200">
+                <ul class="list-disc list-inside space-y-2.5 leading-relaxed font-medium">
+                    <li class="leading-relaxed">Isolated a recurring 14.2% timeout spike on PG-Alpha specifically for Bank-X Virtual Accounts during payday evenings (18:00–21:00 WIB).</li><li class="leading-relaxed">Deploying an automated Smart Routing failover rule to PG-Beta lifted payday authorization success from 85.8% to 97.4%, rescuing Rp 420M/month in GMV at a negligible Rp 1.8M MDR cost difference.</li><li class="leading-relaxed">Automated T+2 reconciliation flagged Rp 85M in unsettled transactions and MDR tier miscalculations for immediate treasury recovery.</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+            <a href="../index.html" class="px-5 py-2.5 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-xs font-mono font-bold hover:border-sky-400 transition">
+                ← Back to All Projects
+            </a>
+            <a href="../../index.html" class="px-5 py-2.5 rounded-xl bg-sky-500 text-slate-950 text-xs font-mono font-bold hover:bg-sky-400 transition">
+                Back to Home
+            </a>
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="py-16 px-6 border-t border-slate-200 dark:border-slate-800 text-center max-w-5xl mx-auto">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">Let's Talk</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl mx-auto mb-6">
+            Interested in collaborating on Business & Data Analysis, Data Quality Engineering, BigQuery/Impala SQL Modeling, or Semi-AI BI dashboards?
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <!-- GANTI LINK EMAIL, LINKEDIN, & GITHUB DI SINI -->
+            <a href="mailto:perdana.afrisandi@email.com" class="px-6 py-3 rounded-xl bg-sky-500 text-slate-950 font-bold text-sm hover:bg-sky-400 transition">
+                ✉️ Let's Talk via Email
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="px-6 py-3 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-sm font-semibold hover:border-sky-400 transition">
+                🔗 LinkedIn
+            </a>
+            <a href="https://github.com" target="_blank" class="px-6 py-3 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-sm font-semibold hover:border-sky-400 transition">
+                💻 GitHub
+            </a>
+        </div>
+        <div class="text-xs text-slate-500 font-mono">
+            © 2026 Perdana Afrisandi · Business · Data · Technology
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                if (icon) icon.textContent = '🌙 Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                if (icon) icon.textContent = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        (function initTheme() {
+            const saved = localStorage.getItem('theme');
+            const icon = document.getElementById('themeIcon');
+            if (saved === 'light') {
+                document.documentElement.classList.remove('dark');
+                if (icon) icon.textContent = '🌙 Dark';
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perdana Afrisandi | Data Analyst & Data Quality Portfolio</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Perdana Afrisandi · Business, Data & Analytics Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -25,329 +23,313 @@
             }
         }
     </script>
-    <style>
-        ::-webkit-scrollbar { width: 8px; height: 8px; }
-        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.08); }
-        ::-webkit-scrollbar-thumb { background: rgba(100, 116, 139, 0.35); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(56, 189, 248, 0.6); }
-    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-darkBg dark:text-slate-200 font-sans antialiased transition-colors duration-300 selection:bg-sky-500 selection:text-white">
 
-    <!-- ========================================================================= -->
-    <!-- TOP CONFIDENTIALITY & SYNTHETIC DATA NOTICE                               -->
-    <!-- ========================================================================= -->
+    <!-- TOP SYNTHETIC DATA NOTICE -->
     <div class="bg-sky-500/10 border-b border-sky-500/20 px-4 py-2 text-center text-xs font-mono text-sky-700 dark:text-sky-300">
-        🛡️ <strong>100% Synthetic & Public Datasets:</strong> All projects and schemas use simulated or public datasets to strictly uphold enterprise data confidentiality.
+        🛡️ <strong>100% Synthetic & Public Datasets:</strong> All projects, schemas, and metrics use simulated or public data to strictly protect enterprise confidentiality.
     </div>
 
-    <!-- ========================================================================= -->
-    <!-- NAVBAR (CLEAN + DARK/LIGHT MODE SWITCHER)                                 -->
-    <!-- ========================================================================= -->
-    <nav class="sticky top-0 w-full z-40 bg-white/85 dark:bg-darkBg/85 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <!-- NAVBAR EXACTLY LIKE MBIILE.COM -->
+    <nav class="sticky top-0 w-full z-40 bg-white/90 dark:bg-darkBg/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 inline-block"></span>
-                Perdana<span class="text-sky-500 font-mono">.data</span>
+            <a href="index.html" class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                Perdana<span class="text-sky-500">.</span>
             </a>
 
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600 dark:text-slate-300">
-                <a href="#about" class="hover:text-sky-500 transition">About</a>
-                <a href="#edge" class="hover:text-sky-500 transition">Why DQ + Semi-AI</a>
-                <a href="#projects" class="hover:text-sky-500 transition">Case Studies (5)</a>
-                <a href="#methodology" class="hover:text-sky-500 transition">Approach</a>
+            <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="index.html#home" class="hover:text-sky-500 transition">Home</a>
+                <a href="index.html#about" class="hover:text-sky-500 transition">About</a>
+                <a href="index.html#skills" class="hover:text-sky-500 transition">Skills</a>
+                <a href="projects/index.html" class="hover:text-sky-500 transition font-semibold text-sky-500">Projects</a>
+                <a href="index.html#education" class="hover:text-sky-500 transition">Education</a>
+                <a href="index.html#certifications" class="hover:text-sky-500 transition">Certifications</a>
             </div>
 
             <div class="flex items-center space-x-3">
-                <!-- DARK / LIGHT MODE TOGGLE BUTTON -->
-                <button id="themeToggle" onclick="toggleTheme()" class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-300 border border-slate-200 dark:border-slate-700 hover:border-sky-400 transition text-xs font-mono font-semibold" title="Switch Dark / Light Mode">
-                    <span id="themeIcon">☀️ Light Mode</span>
+                <button onclick="toggleTheme()" class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-300 border border-slate-200 dark:border-slate-700 hover:border-sky-400 transition text-xs font-mono font-semibold" title="Switch Dark / Light Mode">
+                    <span id="themeIcon">☀️ Light</span>
                 </button>
-                <a href="#contact" class="hidden sm:inline-block px-4 py-2 rounded-xl bg-sky-500 text-slate-950 text-sm font-bold hover:bg-sky-400 transition">
-                    Contact
+                <a href="index.html#contact" class="px-4 py-2 rounded-xl bg-sky-500 text-slate-950 text-sm font-bold hover:bg-sky-400 transition">
+                    Let's Talk
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- ========================================================================= -->
-    <!-- HERO SECTION (CLEAN, SPACIOUS, EXECUTIVE)                                 -->
-    <!-- ========================================================================= -->
-    <section id="about" class="pt-16 pb-20 px-6 max-w-6xl mx-auto">
+    <!-- HERO / HOME SECTION -->
+    <section id="home" class="pt-16 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-7 space-y-6">
-                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-medium">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span>DATA ANALYST • DATA QUALITY • SEMI-AI ANALYTICS</span>
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-600 dark:text-sky-400 text-xs font-mono font-semibold">
+                    <span>BUSINESS & DATA ANALYST · DATA QUALITY · SEMI-AI BI</span>
                 </div>
 
                 <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-500">Perdana Afrisandi</span>
+                    Perdana Afrisandi
                 </h1>
 
                 <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                    I build <strong>trusted business analytics</strong>. In real companies, insights often fail not because the charts look bad, but because the underlying data is unvalidated or disconnected from P&L decisions. I combine <strong>Data Quality (DQ) validation</strong>, <strong>BigQuery/Impala SQL data modeling</strong>, and <strong>Deterministic Semi-AI Chatbots</strong> to turn complex data into measurable revenue and cost impact.
+                    Turning complex, messy enterprise data into <strong>trusted business decisions</strong>. I bridge <strong>Data Quality (DQ) Engineering</strong>, <strong>BigQuery/Impala SQL Modeling</strong>, and <strong>Guardrailed Semi-AI Analytics</strong> to solve high-impact problems in Revenue Assurance, Fintech, Retail Margin, and Customer 360.
                 </p>
 
-                <!-- Clean 3-Pillar Metric Summary -->
-                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
-                    <div>
-                        <div class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white font-mono">DQ-First</div>
-                        <div class="text-xs text-slate-500 dark:text-slate-400">Validated SQL & Star Schemas</div>
-                    </div>
-                    <div>
-                        <div class="text-xl sm:text-2xl font-extrabold text-sky-500 font-mono">Semi-AI</div>
-                        <div class="text-xs text-slate-500 dark:text-slate-400">Exact SQL Math + AI Narrative</div>
-                    </div>
-                    <div>
-                        <div class="text-xl sm:text-2xl font-extrabold text-emerald-500 font-mono">P&L Driven</div>
-                        <div class="text-xs text-slate-500 dark:text-slate-400">Root-Cause to ROI Impact</div>
-                    </div>
-                </div>
-
                 <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#projects" class="px-6 py-3.5 rounded-xl bg-sky-500 text-slate-950 font-bold hover:bg-sky-400 transition shadow-md">
-                        Explore 5 Flagship Case Studies →
+                    <a href="projects/index.html" class="px-6 py-3.5 rounded-xl bg-sky-500 text-slate-950 font-bold hover:bg-sky-400 transition shadow-md">
+                        View All Projects →
                     </a>
-                    <a href="#contact" class="px-6 py-3.5 rounded-xl bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 font-semibold hover:border-sky-400 transition">
-                        Get in Touch
+                    <a href="#about" class="px-6 py-3.5 rounded-xl bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 font-semibold hover:border-sky-400 transition">
+                        About & Background
                     </a>
                 </div>
             </div>
 
-            <!-- ========================================================================= -->
-            <!-- [UPLOAD GAMBAR DI SINI - FOTO PROFIL / HERO PREVIEW]                      -->
-            <!-- Saat ini menggunakan gambar dummy dari Unsplash agar langsung tampil.      -->
-            <!-- Nanti malam, simpan foto/gambarmu di folder yang sama (misal: profil.jpg) -->
-            <!-- lalu ganti bagian src="https://..." menjadi src="profil.jpg"              -->
-            <!-- ========================================================================= -->
+            <!-- [UPLOAD GAMBAR DI SINI - FOTO PROFIL HERO] -->
             <div class="lg:col-span-5">
-                <div class="relative group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition"></div>
-                    <div class="relative bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-lg">
-                        <!-- GANTI SRC GAMBAR PROFIL DI BARIS BAWAH INI -->
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" 
-                             alt="Perdana Afrisandi Portfolio Preview" 
-                             class="rounded-xl w-full h-72 object-cover border border-slate-200 dark:border-slate-800">
-                        <div class="mt-4 space-y-2.5">
-                            <div class="flex justify-between items-center text-xs font-mono text-slate-500 dark:text-slate-400">
-                                <span>📍 Jakarta, Indonesia</span>
-                                <span class="text-sky-500 font-semibold">BigQuery • Impala • Python • BI</span>
-                            </div>
+                <div class="bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" 
+                         alt="Perdana Afrisandi Portfolio" 
+                         class="rounded-xl w-full h-72 object-cover border border-slate-200 dark:border-slate-800">
+                    <div class="mt-4 flex justify-between items-center text-xs font-mono text-slate-500 dark:text-slate-400">
+                        <span>📍 Jakarta, Indonesia</span>
+                        <span class="text-sky-500 font-bold">Business · Data · Technology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-16 bg-slate-100/80 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800 px-6">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="grid md:grid-cols-12 gap-8 items-start">
+                <div class="md:col-span-4">
+                    <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">01 / About Me</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Bridging Data Reliability & Commercial Strategy</h2>
+                </div>
+                <div class="md:col-span-8 space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <p>
+                        In real-world enterprises, executive dashboards often fail—not because the visualizations lack polish, but because the underlying tables suffer from silent schema drift, duplicate keys, or unvalidated business logic.
+                    </p>
+                    <p>
+                        With a strong foundation in <strong>Enterprise Data Quality (DQ)</strong>, <strong>SQL Data Reconciliation (BigQuery & Impala)</strong>, and <strong>Workflow Automation</strong>, I approach Data Analysis from the ground up: ensuring the data is mathematically trustworthy first, modeling it into clean Star Schemas, isolating commercial root causes, and empowering business users with <strong>Deterministic Semi-AI Chatbots</strong> that combine exact SQL calculations with AI-generated executive narratives.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 6-Step Analytical Workflow -->
+            <div>
+                <h3 class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-4">My 6-Step Analytical Workflow</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-6 gap-4">
+                    <div class="p-4 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-sky-500 font-bold">01. Understand</div>
+                        <div class="font-bold text-sm text-slate-900 dark:text-white mt-1">Business Framing</div>
+                        <p class="text-xs text-slate-500 mt-1">Define the P&L problem, decision owner, and target KPIs.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-sky-500 font-bold">02. Validate (DQ)</div>
+                        <div class="font-bold text-sm text-slate-900 dark:text-white mt-1">Data Quality Gate</div>
+                        <p class="text-xs text-slate-500 mt-1">Audit null drift, duplicates, and cross-table parity in SQL.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-sky-500 font-bold">03. Model</div>
+                        <div class="font-bold text-sm text-slate-900 dark:text-white mt-1">Star Schema</div>
+                        <p class="text-xs text-slate-500 mt-1">Structure clean Fact & Dimension tables with governed grain.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-sky-500 font-bold">04. Analyse</div>
+                        <div class="font-bold text-sm text-slate-900 dark:text-white mt-1">Root-Cause Math</div>
+                        <p class="text-xs text-slate-500 mt-1">Run cohort, elasticity, and variance attribution in SQL/Python.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-sky-500 font-bold">05. Visualise & AI</div>
+                        <div class="font-bold text-sm text-slate-900 dark:text-white mt-1">BI + Semi-AI Bot</div>
+                        <p class="text-xs text-slate-500 mt-1">Build interactive Control Towers & guardrailed SQL Q&A bots.</p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-sky-500 font-bold">06. Drive Action</div>
+                        <div class="font-bold text-sm text-slate-900 dark:text-white mt-1">Quantified ROI</div>
+                        <p class="text-xs text-slate-500 mt-1">Deliver concrete operational recommendations & P&L impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-16 px-6 max-w-6xl mx-auto">
+        <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">02 / Technical Stack</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1 mb-8">Skills & Core Competencies</h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="text-xs font-mono text-sky-500 font-bold mb-2">DATA & CLOUD SQL</div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Querying & Modeling</h3>
+                <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300 font-mono">
+                    <li>• Google BigQuery (Standard SQL)</li>
+                    <li>• Apache Impala / Hive SQL</li>
+                    <li>• Dimensional Star Schema Design</li>
+                    <li>• Window Functions & CTE Optimization</li>
+                </ul>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="text-xs font-mono text-emerald-500 font-bold mb-2">DATA QUALITY & GOVERNANCE</div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Reliability & Audit</h3>
+                <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300 font-mono">
+                    <li>• Cross-Platform Storage Reconciliation</li>
+                    <li>• 58+ Attribute Drift & Null Monitoring</li>
+                    <li>• Automated SQL Validation Suites</li>
+                    <li>• Pipeline SLA & Freshness Observability</li>
+                </ul>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="text-xs font-mono text-indigo-500 font-bold mb-2">PYTHON, BI & SEMI-AI</div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Apps & Visualization</h3>
+                <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300 font-mono">
+                    <li>• Python (pandas, NumPy, statsmodels)</li>
+                    <li>• Streamlit Interactive Data Apps</li>
+                    <li>• Looker Studio & Power BI</li>
+                    <li>• Deterministic SQL + AI Chatbots</li>
+                </ul>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="text-xs font-mono text-amber-500 font-bold mb-2">BUSINESS ANALYTICS</div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Commercial Acumen</h3>
+                <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300 font-mono">
+                    <li>• Revenue Assurance & Leakage Audit</li>
+                    <li>• Promo Cannibalization & Elasticity</li>
+                    <li>• Cohort, Vintage & Roll-Rate Risk</li>
+                    <li>• Executive Data Storytelling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS PREVIEW -->
+    <section id="projects-preview" class="py-16 bg-slate-100/80 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">03 / Portfolio</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Featured Case Studies</h2>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Each project opens its own dedicated case study page with full methodology, data model, and takeaways.</p>
+                </div>
+                <a href="projects/index.html" class="px-5 py-2.5 rounded-xl bg-sky-500 text-slate-950 font-bold text-xs font-mono hover:bg-sky-400 transition self-start sm:self-auto">
+                    View All 5 Projects Directory →
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-7">
+                <a href="projects/customer-360/index.html" class="group bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500 transition flex flex-col justify-between shadow-sm hover:shadow-xl">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Customer 360" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="p-6">
+                            <div class="text-xs font-mono text-sky-500 font-bold mb-1">2026 · CRM & SEMI-AI BI</div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition mb-2">Customer 360 Intelligence Platform (with Semi-AI)</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Unifying 5 siloed touchpoints into a 58-attribute Golden Record with a deterministic SQL + AI Assistant.</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- MY ANALYTICAL EDGE (3 PILLARS + TECH STACK)                               -->
-    <!-- ========================================================================= -->
-    <section id="edge" class="py-16 bg-slate-100/80 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="mb-10">
-                <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">What Makes My Work Different</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Bridging Data Quality, Business Analysis & Semi-AI</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
-                    <div class="text-xs font-mono text-emerald-500 font-bold mb-2">01 / DATA QUALITY FOUNDATION</div>
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Zero "Garbage-In, Garbage-Out"</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Every analysis begins with automated SQL reconciliation, null-drift detection, and primary-key deduplication so executives never make decisions on flawed numbers.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-sky-500/40 shadow-sm">
-                    <div class="text-xs font-mono text-sky-500 font-bold mb-2">02 / DETERMINISTIC SEMI-AI CHATBOT</div>
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Guardrailed SQL + AI Narrative</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Instead of letting AI guess numbers, my Semi-AI workflow routes user questions to verified SQL/Python calculations first, then uses AI strictly to explain the insight clearly.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
-                    <div class="text-xs font-mono text-indigo-500 font-bold mb-2">03 / COMMERCIAL ROOT-CAUSE</div>
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Decision-Oriented Storytelling</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        I go beyond descriptive reporting to isolate root causes (e.g., promo cannibalization, payment gateway timeouts, credit DSO traps) and quantify the exact Rp/USD impact.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 5 CURATED FLAGSHIP CASE STUDIES (THE GOLDEN RULE: CLEAN & FOCUSED)        -->
-    <!-- ========================================================================= -->
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="mb-12">
-            <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">Curated Portfolio</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-1">5 Flagship End-to-End Case Studies</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm mt-2 max-w-2xl">
-                Selected to demonstrate depth across <strong>Customer 360 & Semi-AI</strong>, <strong>Fintech Reconciliation</strong>, <strong>Retail Margin Analytics</strong>, <strong>Telecom Revenue Assurance</strong>, and <strong>B2B Credit Risk</strong>. Click any project to inspect its 5-stage breakdown.
-            </p>
-        </div>
-
-        <!-- 5 Flagship Cards List (Spacious Layout like mbiile.com) -->
-        <div id="flagshipList" class="space-y-10"></div>
-
-        <!-- Optional Compact Archive Accordion (The "4+Archive" Rule: Hidden by Default!) -->
-        <div class="mt-14 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
-            <button onclick="toggleArchive()" id="archiveBtn" class="px-5 py-2.5 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-xs font-mono font-semibold text-slate-700 dark:text-slate-300 hover:border-sky-400 transition">
-                📂 Show 12 Additional Industry Case Study Blueprints (Logistics, Healthcare, Manufacturing, SaaS) ▼
-            </button>
-
-            <div id="archiveSection" class="hidden mt-8 text-left">
-                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
-                    <div class="flex justify-between items-center mb-4">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white font-mono uppercase text-sky-500">Additional Cross-Industry Analytical Blueprints</h4>
-                        <span class="text-xs text-slate-500">Compact Archive View</span>
+                    <div class="px-6 pb-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs font-mono text-sky-500 font-bold">
+                        <span>Open Dedicated Page</span>
+                        <span>→</span>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left text-xs border-collapse">
-                            <thead>
-                                <tr class="border-b border-slate-200 dark:border-slate-800 text-slate-500 font-mono">
-                                    <th class="py-3 pr-4">Industry</th>
-                                    <th class="py-3 pr-4">Project & Business Problem</th>
-                                    <th class="py-3 pr-4">Core Analytical Method</th>
-                                    <th class="py-3">Quantified Decision Impact</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-200/60 dark:divide-slate-800/70 text-slate-700 dark:text-slate-300">
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">E-Commerce</td>
-                                    <td class="py-3 pr-4 font-semibold">Marketplace Seller SLA Breach & Refund Attribution</td>
-                                    <td class="py-3 pr-4">Milestone Lead-Time Decomposition & Cohort Survival</td>
-                                    <td class="py-3 text-emerald-500 font-medium">-31% late cancellations via next-day handover SLA</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Telecom (CVM)</td>
-                                    <td class="py-3 pr-4 font-semibold">Churn Early-Warning: Network vs. Commercial Root-Cause</td>
-                                    <td class="py-3 pr-4">Usage Decay vs. BTS Trouble Ticket Uplift Matrix</td>
-                                    <td class="py-3 text-emerald-500 font-medium">Saved Rp 650M/qtr by halting discounts on network churners</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Logistics</td>
-                                    <td class="py-3 pr-4 font-semibold">Cold-Chain Spoilage, Dock Dwell-Time & OTIF Penalty</td>
-                                    <td class="py-3 pr-4">Gate-to-Gate Bottleneck & IoT Temp Excursion Audit</td>
-                                    <td class="py-3 text-emerald-500 font-medium">Lifted OTIF from 84% to 95.5% (-Rp 280M/mo penalties)</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Healthcare</td>
-                                    <td class="py-3 pr-4 font-semibold">Hospital Insurance Claim Denial & RCM Pre-Audit Gate</td>
-                                    <td class="py-3 pr-4">ICD-10 vs. ICD-9 SQL Validation Rule Engine</td>
-                                    <td class="py-3 text-emerald-500 font-medium">Cut pending/denied claims from 12.4% to 4.1%</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Manufacturing</td>
-                                    <td class="py-3 pr-4 font-semibold">OEE Downtime Loss, Batch Changeover & Scrap Cost</td>
-                                    <td class="py-3 pr-4">Six Big Losses Pareto & Sequence Matrix</td>
-                                    <td class="py-3 text-emerald-500 font-medium">-32% setup time & Rp 190M/mo saved via Light-to-Dark sequence</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Fintech BNPL</td>
-                                    <td class="py-3 pr-4 font-semibold">Paylater First-Payment Default (FPD30) & Limit Strategy</td>
-                                    <td class="py-3 pr-4">Vintage Delinquency & Roll-Rate Matrix</td>
-                                    <td class="py-3 text-emerald-500 font-medium">Cut FPD30 from 4.8% to 2.9% by capping midnight digital vouchers</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Insurance</td>
-                                    <td class="py-3 pr-4 font-semibold">Health/Motor Claim Leakage & Provider Anomaly Triage</td>
-                                    <td class="py-3 pr-4">Peer-Normalized Z-Score & Split-Billing Detection</td>
-                                    <td class="py-3 text-emerald-500 font-medium">Flagged Rp 1.2B/yr in upcoding & over-prescription</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Energy & Utility</td>
-                                    <td class="py-3 pr-4 font-semibold">Non-Technical Loss (Electricity Theft) Smart Meter Audit</td>
-                                    <td class="py-3 pr-4">Feeder Peer Baseline & Step-Change Drop Detection</td>
-                                    <td class="py-3 text-emerald-500 font-medium">Boosted field inspection hit-rate from <5% to 41%</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Fashion Retail</td>
-                                    <td class="py-3 pr-4 font-semibold">Store Assortment & Inter-Store Stock Transfer Optimizer</td>
-                                    <td class="py-3 pr-4">ABC-XYZ Matrix & Transfer vs. Markdown Margin Model</td>
-                                    <td class="py-3 text-emerald-500 font-medium">Saved Rp 145M margin via branch stock rebalancing</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">B2B SaaS</td>
-                                    <td class="py-3 pr-4 font-semibold">Feature Adoption Funnel, Seat Utilization & Renewal Risk</td>
-                                    <td class="py-3 pr-4">Habit Loop Correlation & D-90 Renewal Radar</td>
-                                    <td class="py-3 text-emerald-500 font-medium">Protected $320K ARR via automated CSM intervention</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Fleet & Mining</td>
-                                    <td class="py-3 pr-4 font-semibold">Fleet Fuel Pilferage, Idle-Time & Route Cost Audit</td>
-                                    <td class="py-3 pr-4">Payload-Adjusted Regression Residual Outlier Check</td>
-                                    <td class="py-3 text-emerald-500 font-medium">-8.4% diesel spend (Rp 310M/mo) by closing leaky stations</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-3 pr-4 font-mono text-sky-500">Pharmacy Chain</td>
-                                    <td class="py-3 pr-4 font-semibold">Batch Expiry Write-Off, FEFO Audit & Dynamic Replenishment</td>
-                                    <td class="py-3 pr-4">Lot-Level FEFO Violation Window Check</td>
-                                    <td class="py-3 text-emerald-500 font-medium">-62% expired drug write-offs via 120-day pre-expiry transfers</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </a>
+
+                <a href="projects/payment-reconciliation/index.html" class="group bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500 transition flex flex-col justify-between shadow-sm hover:shadow-xl">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Payment Reconciliation" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="p-6">
+                            <div class="text-xs font-mono text-emerald-500 font-bold mb-1">2026 · FINTECH & DATA QUALITY</div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition mb-2">Payment Gateway Smart Routing & Settlement Recon</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">3-way SQL reconciliation & smart failover simulation recovering Rp 420M/mo in peak-hour checkouts.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs font-mono text-sky-500 font-bold">
+                        <span>Open Dedicated Page</span>
+                        <span>→</span>
+                    </div>
+                </a>
+
+                <a href="projects/promo-cannibalization/index.html" class="group bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500 transition flex flex-col justify-between shadow-sm hover:shadow-xl">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Promo Cannibalization" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="p-6">
+                            <div class="text-xs font-mono text-indigo-500 font-bold mb-1">2026 · RETAIL & COMMERCIAL</div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition mb-2">Omnichannel Promo Cannibalization & Margin Erosion</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Isolating baseline lift, sister-SKU cannibalization, and post-promo dip to lift net margin by +4.8%.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-5 pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center text-xs font-mono text-sky-500 font-bold">
+                        <span>Open Dedicated Page</span>
+                        <span>→</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS SECTION -->
+    <section id="education" class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">04 / Background</span>
+                <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1 mb-6">Education & Professional Focus</h2>
+                <div class="space-y-4">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-sky-500 font-bold">CURRENT FOCUS · ENTERPRISE TELECOM DATA</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1">Data Management Engineering & Data Quality</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                            Supporting enterprise data workflows, BigQuery/Impala data validation, multi-table storage reconciliation, and automated DQ monitoring dashboards.
+                        </p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-indigo-500 font-bold">ACADEMIC FOUNDATION</div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white mt-1">Bachelor's Degree · Quantitative & Business Systems</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                            Focused on database systems, structured analytical thinking, statistical analysis, and business operations management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="certifications">
+                <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">05 / Credentials</span>
+                <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1 mb-6">Certifications & Specializations</h2>
+                <div class="space-y-4">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 flex justify-between items-center">
+                        <div>
+                            <div class="text-xs font-mono text-emerald-500 font-bold">CLOUD DATA ANALYTICS</div>
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white mt-0.5">Google BigQuery & Enterprise SQL Data Modeling</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Partitioned Tables, Query Optimization & Reconciliation</p>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-500 text-xs font-mono font-bold">Verified</span>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 flex justify-between items-center">
+                        <div>
+                            <div class="text-xs font-mono text-sky-500 font-bold">BUSINESS INTELLIGENCE & AI</div>
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white mt-0.5">Python, Streamlit & Guardrailed Semi-AI Analytics</h3>
+                            <p class="text-xs text-slate-500 mt-0.5">Interactive Control Towers & Deterministic NL2SQL</p>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-sky-500/10 text-sky-500 text-xs font-mono font-bold">Active</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========================================================================= -->
-    <!-- METHODOLOGY SECTION (CLEAN 5-STAGE STANDARD)                              -->
-    <!-- ========================================================================= -->
-    <section id="methodology" class="py-16 bg-slate-100/80 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="mb-10">
-                <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">Structured Workflow</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">How Every Case Study Is Engineered</h2>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
-                    <span class="text-xs font-mono text-sky-500 font-bold">01 / OVERVIEW</span>
-                    <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Business Problem</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400">Pinpointing what is hurting revenue, margin, or cashflow, and who owns the decision.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
-                    <span class="text-xs font-mono text-indigo-500 font-bold">02 / DATA & SCHEMA</span>
-                    <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Star Schema Model</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400">Designing clean Fact & Dimension tables in BigQuery/Impala with clear grain definitions.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
-                    <span class="text-xs font-mono text-amber-500 font-bold">03 / CHALLENGES</span>
-                    <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Data Quality Gate</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400">Resolving duplicates, null spikes, timezone cutoffs, and cross-table mismatches first.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
-                    <span class="text-xs font-mono text-emerald-500 font-bold">04 / WALKTHROUGH</span>
-                    <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Analysis & Semi-AI</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400">Isolating root causes with SQL & Python and enabling guardrailed Semi-AI Q&A.</p>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
-                    <span class="text-xs font-mono text-rose-500 font-bold">05 / TAKEAWAYS</span>
-                    <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Action & ROI</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400">Translating technical findings into concrete operational changes and financial impact.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- FOOTER / CONTACT                                                          -->
-    <!-- ========================================================================= -->
-    <footer id="contact" class="py-16 px-6 border-t border-slate-200 dark:border-slate-800 text-center max-w-4xl mx-auto">
-        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">Let's Connect</h3>
+    <!-- FOOTER -->
+    <footer id="contact" class="py-16 px-6 border-t border-slate-200 dark:border-slate-800 text-center max-w-5xl mx-auto">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">Let's Talk</h3>
         <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl mx-auto mb-6">
-            Open for discussions on Data Analytics, Data Quality Engineering, BigQuery/Impala SQL Modeling, and Semi-AI Business Intelligence.
+            Interested in collaborating on Business & Data Analysis, Data Quality Engineering, BigQuery/Impala SQL Modeling, or Semi-AI BI dashboards?
         </p>
         <div class="flex flex-wrap justify-center gap-4 mb-10">
             <!-- GANTI LINK EMAIL, LINKEDIN, & GITHUB DI SINI -->
             <a href="mailto:perdana.afrisandi@email.com" class="px-6 py-3 rounded-xl bg-sky-500 text-slate-950 font-bold text-sm hover:bg-sky-400 transition">
-                ✉️ Email Me
+                ✉️ Let's Talk via Email
             </a>
             <a href="https://linkedin.com" target="_blank" class="px-6 py-3 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-sm font-semibold hover:border-sky-400 transition">
                 🔗 LinkedIn
@@ -357,334 +339,31 @@
             </a>
         </div>
         <div class="text-xs text-slate-500 font-mono">
-            © 2026 Perdana Afrisandi • 100% Synthetic Portfolio Datasets • Built with HTML & Tailwind CSS.
+            © 2026 Perdana Afrisandi · Business · Data · Technology
         </div>
     </footer>
 
-    <!-- ========================================================================= -->
-    <!-- FULL CASE STUDY MODAL (OVERVIEW, DATA, CHALLENGES, WALKTHROUGH, TAKEAWAYS)-->
-    <!-- ========================================================================= -->
-    <div id="caseModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm overflow-y-auto p-4 sm:p-8">
-        <div class="max-w-5xl mx-auto bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden my-6">
-            
-            <!-- Modal Header -->
-            <div class="p-6 sm:p-8 border-b border-slate-200 dark:border-slate-800 flex justify-between items-start gap-4 bg-slate-50 dark:bg-slate-900/70">
-                <div>
-                    <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-sky-500 mb-2">
-                        <span id="mIndustry" class="px-2.5 py-0.5 rounded bg-sky-500/10 font-bold"></span>
-                        <span>•</span>
-                        <span id="mRole" class="text-emerald-500 font-semibold"></span>
-                    </div>
-                    <h2 id="mTitle" class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white"></h2>
-                </div>
-                <button onclick="closeModal()" class="px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-rose-500 hover:text-white transition font-mono text-xs font-bold">
-                    ✕ CLOSE
-                </button>
-            </div>
-
-            <!-- Modal Body -->
-            <div class="p-6 sm:p-8 space-y-8">
-                <!-- Screenshot Preview Banner -->
-                <div class="grid md:grid-cols-12 gap-6 items-center bg-slate-100 dark:bg-slate-900/60 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
-                    <div class="md:col-span-7">
-                        <img id="mImage" src="" alt="Project Dashboard Screenshot" class="w-full h-64 object-cover rounded-lg border border-slate-300 dark:border-slate-700">
-                    </div>
-                    <div class="md:col-span-5 space-y-3">
-                        <div class="text-xs font-mono uppercase text-sky-500 font-bold">Executive Impact Summary</div>
-                        <p id="mImpactBanner" class="text-sm font-semibold text-slate-800 dark:text-slate-200 leading-relaxed"></p>
-                        <div class="text-xs text-slate-500 dark:text-slate-400">
-                            <strong>Stakeholders:</strong> <span id="mUsers"></span>
-                        </div>
-                        <div id="mStack" class="flex flex-wrap gap-1.5 pt-2"></div>
-                    </div>
-                </div>
-
-                <!-- 5-Stage Case Study Breakdown -->
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
-                        <div class="text-xs font-mono text-sky-500 font-bold mb-1">01 / OVERVIEW & BUSINESS PROBLEM</div>
-                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">Context & Why It Matters</h4>
-                        <p id="mOverview" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
-                    </div>
-
-                    <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
-                        <div class="text-xs font-mono text-indigo-500 font-bold mb-1">02 / DATA & STAR SCHEMA MODELING</div>
-                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">Synthetic Dataset & Architecture</h4>
-                        <p id="mData" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
-                    </div>
-
-                    <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
-                        <div class="text-xs font-mono text-amber-500 font-bold mb-1">03 / DATA QUALITY CHALLENGES SOLVED</div>
-                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">How Data Reliability Was Ensured</h4>
-                        <p id="mChallenges" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
-                    </div>
-
-                    <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
-                        <div class="text-xs font-mono text-emerald-500 font-bold mb-1">04 / ANALYTICAL WALKTHROUGH & SEMI-AI</div>
-                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">Finding the Root Cause</h4>
-                        <p id="mWalkthrough" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
-                    </div>
-                </div>
-
-                <!-- 5. KEY TAKEAWAYS -->
-                <div class="p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 space-y-2">
-                    <div class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold">05 / KEY TAKEAWAYS & BUSINESS DECISION</div>
-                    <h4 class="text-lg font-bold text-slate-900 dark:text-white">Recommended Action & Quantified P&L Impact</h4>
-                    <p id="mTakeaways" class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed"></p>
-                </div>
-
-                <!-- SQL Snippet -->
-                <div class="p-5 rounded-xl bg-slate-900 text-slate-200 font-mono text-xs overflow-x-auto border border-slate-800">
-                    <div class="text-sky-400 font-bold mb-2">// Core SQL / Validation Logic Used in This Case Study</div>
-                    <pre id="mSql" class="whitespace-pre-wrap leading-relaxed text-slate-300"></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- JAVASCRIPT: 5 FLAGSHIP PROJECTS + MODAL + ARCHIVE + THEME SWITCHER        -->
-    <!-- ========================================================================= -->
     <script>
-        const FLAGSHIP_PROJECTS = [
-            {
-                id: 1,
-                badge: "FLAGSHIP 01 • AI & CUSTOMER ANALYTICS",
-                title: "Customer 360 Intelligence Platform (with Semi-AI Assistant)",
-                industry: "Omnichannel CRM & Martech (100% Synthetic)",
-                role: "Data Modeling, DQ Golden Record & Semi-AI Builder",
-                // [UPLOAD GAMBAR DI SINI - PROJECT 1: CUSTOMER 360 INTELLIGENCE PLATFORM]
-                img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
-                users: "CRM Director, Growth Marketing, Customer Value Management (CVM)",
-                impact: "Unified 5 siloed customer data sources into a validated 58-attribute Golden Record; boosted retention conversion by +22% and prevented Rp 480M/quarter in wasted promo blasts.",
-                stack: ["BigQuery SQL", "Python", "58-Attr DQ Gate", "Streamlit", "Semi-AI Chatbot", "Looker Studio"],
-                overview: "Customer data is often fragmented across app orders, web sessions, loyalty tiers, support tickets, and promo logs. Marketing teams unknowingly blast upsell promos to high-value customers who currently have unresolved technical complaints—triggering immediate churn. This project builds an end-to-end Customer 360 platform with an automated Data Quality gate and a deterministic Semi-AI Assistant.",
-                data: "100% Synthetic Omnichannel Dataset (250,000 customers, 1.8M transactions, 95k support tickets). Modeled as a Star Schema in BigQuery: `dim_customer_golden_record` (58 monitored attributes), `fact_omnichannel_orders`, `fact_support_tickets`, and `fact_campaign_exposures`.",
-                challenges: "Solved 3 critical DQ challenges: (1) Deduplicating fragmented customer IDs across phone/email updates, (2) Monitoring daily null drift and schema anomalies across 58 customer attributes before segmentation runs, and (3) Eliminating AI number hallucinations by restricting the LLM from writing raw, unverified calculations.",
-                walkthrough: "Engineered an RFM+C (Recency, Frequency, Monetary + Complaint & Latency Penalty) health score in SQL. Built a Semi-AI Chatbot that maps user questions via Intent Routing to parameterized, pre-validated SQL queries—computing 100% exact cohort numbers first before using AI to generate executive action summaries.",
-                takeaways: "Isolated 14% of VIP Platinum customers who experienced app checkout errors and had open high-severity support tickets. Automatically suppressing marketing blasts for this group and routing them to priority concierge resolution reduced VIP churn from 18.4% to 6.2%.",
-                sql: `WITH customer_360 AS (
-  SELECT c.customer_id, c.segment_tier, c.dq_trust_score,
-         COUNT(DISTINCT o.order_id) AS orders_90d,
-         SUM(o.net_revenue_idr) AS revenue_90d,
-         COUNTIF(t.ticket_status = 'OPEN' AND t.severity = 'HIGH') AS open_critical_tickets
-  FROM \`synth_crm.dim_customer_golden_58attr\` c
-  LEFT JOIN \`synth_crm.fact_orders\` o ON c.customer_id = o.customer_id
-  LEFT JOIN \`synth_crm.fact_tickets\` t ON c.customer_id = t.customer_id
-  WHERE c.dq_trust_score >= 0.95
-  GROUP BY 1, 2, 3
-)
-SELECT segment_tier, COUNT(*) AS vip_at_risk_count, SUM(revenue_90d) AS protected_revenue_idr
-FROM customer_360
-WHERE segment_tier = 'VIP_PLATINUM' AND open_critical_tickets > 0
-GROUP BY 1;`
-            },
-            {
-                id: 2,
-                badge: "FLAGSHIP 02 • FINTECH & RECONCILIATION",
-                title: "Payment Gateway Failure, Smart Routing & Settlement Reconciliation",
-                industry: "Fintech & Digital Payments (100% Synthetic)",
-                role: "Data Quality Reconciliation & Payment Operations Analytics",
-                // [UPLOAD GAMBAR DI SINI - PROJECT 2: FINTECH PAYMENT RECONCILIATION]
-                img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80",
-                users: "Payment Operations, Treasury/Finance Reconciliation, Checkout PM",
-                impact: "Simulated Smart Failover Routing rescued Rp 420M/month in peak-hour failed checkouts and detected Rp 85M in MDR fee overcharges & unsettled T+2 bank funds.",
-                stack: ["BigQuery SQL", "3-Way Reconciliation", "Python Simulation", "Streamlit Control Tower", "Semi-AI Audit"],
-                overview: "Platforms rely on multiple Payment Gateways (PGs) to process QRIS, Virtual Accounts, and E-Wallets. When one PG suffers latency during payday peak hours, customers abandon their carts. Meanwhile, discrepancies between internal transaction logs and T+2 bank settlement statements cause silent financial leakage.",
-                data: "Synthetic Payment Ecosystem Dataset (500,000 payment attempts across 3 PGs, 6 issuer banks, MDR contract rate tables, and daily bank settlement mutation CSVs).",
-                challenges: "Handling duplicate webhook callbacks (idempotency bugs), reconciling midnight cutoff differences (23:59 WIB vs. UTC bank batch windows), and isolating partial refund adjustments.",
-                walkthrough: "Built an automated 3-way SQL reconciliation pipeline (`internal_orders` vs `pg_webhook_logs` vs `bank_settlement`). Analyzed hourly authorization success rates per PG-Bank pair and simulated an automated failover rule.",
-                takeaways: "Discovered PG-Alpha suffered a 14.2% timeout rate on Bank-X Virtual Accounts during payday evenings (18:00–21:00). Auto-switching Bank-X routing to PG-Beta whenever 5-minute error rates exceed 5% lifted checkout conversion from 85.8% to 97.4%.",
-                sql: `SELECT p.pg_provider, p.payment_method,
-       COUNT(*) AS internal_success_cnt,
-       COUNT(s.settlement_id) AS bank_settled_cnt,
-       SUM(p.gross_amount_idr - COALESCE(s.settled_gross_idr, 0)) AS unsettled_exposure_idr,
-       SUM(s.charged_mdr_fee_idr - (p.gross_amount_idr * r.contract_mdr_pct)) AS mdr_overcharge_idr
-FROM \`synth_fintech.fact_payment_attempts\` p
-LEFT JOIN \`synth_fintech.fact_bank_settlements\` s ON p.trx_id = s.trx_id
-JOIN \`synth_fintech.dim_mdr_rate_card\` r ON p.pg_provider = r.pg_provider AND p.payment_method = r.payment_method
-WHERE p.trx_status = 'SUCCESS'
-GROUP BY 1, 2;`
-            },
-            {
-                id: 3,
-                badge: "FLAGSHIP 03 • COMMERCIAL & MARGIN ANALYTICS",
-                title: "Omnichannel Promo Cannibalization & Margin Erosion Analytics",
-                industry: "FMCG & Modern Retail (Public + Synthetic Data)",
-                role: "Commercial Business Analyst & Price Elasticity Modeler",
-                // [UPLOAD GAMBAR DI SINI - PROJECT 3: RETAIL PROMO CANNIBALIZATION]
-                img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
-                users: "Trade Marketing Manager, Commercial Finance, Category Management",
-                impact: "Revealed 27% of deep-discount campaigns were margin-negative due to sister-SKU cannibalization; reallocating promo budget improved Net Gross Margin by +4.8%.",
-                stack: ["BigQuery SQL", "Baseline Lift Modeling", "Python Statsmodels", "Looker Studio", "ROI Simulator"],
-                overview: "Retailers spend heavily on promotional discounts that spike sales volume during campaign weeks but erode net profit. Why? Many promos merely subsidize loyal buyers who would have bought anyway, trigger forward-buying (stockpiling followed by a post-promo dip), or cannibalize higher-margin sister SKUs.",
-                data: "Public Dunnhumby Retail Dataset enriched with synthetic SKU cost of goods sold (COGS), promotional mechanics, and store cluster attributes across 120 outlets.",
-                challenges: "Separating true incremental lift from seasonal payday spikes and accurately quantifying both Sister-SKU Cannibalization and the 14-day Post-Promo Dip.",
-                walkthrough: "Used SQL Window Functions to establish an 8-week non-promo rolling baseline per SKU. Computed True Net Incremental Margin = (Promo Gross Margin) - (Baseline Margin Without Promo) - (Cannibalized Sister SKU Margin) - (Post-Promo Dip Loss).",
-                takeaways: "Halted 30% direct price cuts on 200g flagship coffee packs (where 65% of volume was cannibalized from higher-margin 100g packs) and shifted to cross-category minimum-basket bundling, increasing Average Order Value (AOV) by +18%.",
-                sql: `SELECT sku_id, promo_type,
-       SUM(actual_units - baseline_units) AS gross_incremental_units,
-       SUM(actual_net_margin_idr - baseline_expected_margin_idr - sister_sku_cannibalized_margin_idr - post_promo_dip_margin_idr) AS true_net_promo_profit_idr
-FROM \`synth_retail.mart_promo_profitability\`
-GROUP BY 1, 2
-HAVING true_net_promo_profit_idr < 0
-ORDER BY true_net_promo_profit_idr ASC;`
-            },
-            {
-                id: 4,
-                badge: "FLAGSHIP 04 • TELECOM & DATA RELIABILITY",
-                title: "Telecom Revenue Assurance & Cross-Layer DWH Control Tower",
-                industry: "Telecommunications (100% Synthetic Generator)",
-                role: "Revenue Assurance & BigQuery Data Reliability Analyst",
-                // [UPLOAD GAMBAR DI SINI - PROJECT 4: TELECOM REVENUE ASSURANCE]
-                img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80",
-                users: "Revenue Assurance Lead, Data Engineering, Billing Operations",
-                impact: "Built an automated 3-layer reconciliation tower (Network CDR vs. Billing vs. Cloud DWH), isolating 2.2% unbilled usage and duplicate charging anomalies.",
-                stack: ["BigQuery SQL", "Impala SQL", "Python Streamlit", "Automated DQ Rules", "Looker Studio"],
-                overview: "Telecom operators process millions of daily network usage events (CDRs). If mediation pipelines drop records, billing catalogs apply wrong tariffs, or DWH migrations lose partitions, the company suffers direct revenue leakage and distorted executive reporting.",
-                data: "100% Synthetic Telecom Dataset (5,000+ daily audited transactions across IM3/Tri-style product simulation: Network CDR logs, Billing ledger, and Cloud DWH tables).",
-                challenges: "Reconciling high-volume multi-stage tables efficiently while distinguishing legitimate free-bonus usage from true unbilled revenue leakage.",
-                walkthrough: "Architected an automated SQL validation suite checking 5 rules: Completeness (Null MSISDN), Uniqueness (Duplicate Trx ID), Unbilled CDRs (CDR > 0 & Billing = 0), Undercharged Tariffs, and Legacy-to-Modern DWH sync parity.",
-                takeaways: "Isolated regional VAS billing sync delays and duplicate transaction IDs within 15 minutes via an interactive Streamlit Control Tower, modeling Rp 1.4B/year in protected revenue.",
-                sql: `SELECT trx_date, product_category, reconciliation_flag,
-       COUNT(trx_id) AS affected_rows,
-       SUM(cdr_gross_idr - billing_charged_idr) AS revenue_leakage_risk_idr
-FROM \`synth_telco.vw_cdr_billing_dwh_audit\`
-WHERE reconciliation_flag <> 'MATCHED_VALID'
-GROUP BY 1, 2, 3 ORDER BY revenue_leakage_risk_idr DESC;`
-            },
-            {
-                id: 5,
-                badge: "FLAGSHIP 05 • BANKING & WORKING CAPITAL RISK",
-                title: "B2B Credit Limit, DSO & Working Capital Risk Optimization",
-                industry: "Commercial Banking & B2B Wholesale Distribution",
-                role: "Financial & Credit Risk Data Analyst",
-                // [UPLOAD GAMBAR DI SINI - PROJECT 5: B2B CREDIT & DSO]
-                img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
-                users: "Credit Committee, CFO / Treasury, B2B Sales Director",
-                impact: "Reallocated Rp 4.2B in credit capacity from chronic late-paying 'Zombie' accounts to credit-capped Tier-A outlets, lifting net sales by +9% and cutting DSO by 6.5 days.",
-                stack: ["BigQuery SQL", "AR Aging & Roll-Rate", "Python Credit Scoring", "Streamlit", "Semi-AI Credit Bot"],
-                overview: "In B2B distribution and commercial lending, extending 30-to-60-day payment terms (TOP) to slow-paying clients traps billions in working capital and increases bad debt provisions—while healthy, fast-selling clients hit their credit limit ceiling and suffer stockouts.",
-                data: "Public Account Receivable & Invoice Payment Dataset enriched with synthetic credit limits, outlet margins, and historical delinquency cohorts.",
-                challenges: "Separating temporary seasonal payment delays from structural credit deterioration using Cohort Roll-Rate Matrices (Current -> DPD 30 -> DPD 60 -> Write-Off).",
-                walkthrough: "Modeled Days Sales Outstanding (DSO), Collection Effectiveness Index (CEI), and Credit Limit Utilization per client. Built a Semi-AI Credit Approval Assistant that queries exact payment velocity before recommending limit adjustments.",
-                takeaways: "Reduced credit limits by 40% on 120 chronic late-payers (averaging 45+ DPD and thin margins) and reassigned that credit line to 85 high-velocity Tier-A outlets, unlocking +9% incremental revenue with zero additional working capital.",
-                sql: `SELECT client_segment,
-       COUNT(DISTINCT client_id) AS total_clients,
-       ROUND(AVG(days_sales_outstanding), 1) AS avg_dso_days,
-       SUM(credit_limit_idr) AS allocated_limit_idr,
-       SUM(overdue_ar_gt_60d_idr) AS delinquent_exposure_idr
-FROM \`synth_b2b.mart_working_capital_risk\`
-GROUP BY 1 ORDER BY delinquent_exposure_idr DESC;`
-            }
-        ];
-
-        function renderFlagships() {
-            const container = document.getElementById('flagshipList');
-            container.innerHTML = FLAGSHIP_PROJECTS.map(p => `
-                <div class="group grid md:grid-cols-12 gap-8 bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 hover:border-sky-500/60 transition shadow-sm hover:shadow-xl">
-                    <div class="md:col-span-5 flex flex-col justify-between">
-                        <div class="relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
-                            <img src="${p.img}" alt="${p.title}" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500">
-                            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/85 text-sky-400 text-[11px] font-mono font-bold">
-                                ${p.badge}
-                            </div>
-                        </div>
-                        <div class="mt-4 flex flex-wrap gap-1.5">
-                            ${p.stack.map(s => `<span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-[11px] font-mono text-slate-600 dark:text-slate-300">${s}</span>`).join('')}
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-7 flex flex-col justify-between space-y-4">
-                        <div>
-                            <div class="text-xs font-mono text-slate-500 dark:text-slate-400 mb-1">
-                                ${p.industry} • <span class="text-sky-500 font-semibold">${p.role}</span>
-                            </div>
-                            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white group-hover:text-sky-500 transition mb-3">
-                                ${p.title}
-                            </h3>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                ${p.overview}
-                            </p>
-                            <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs sm:text-sm text-slate-800 dark:text-slate-200">
-                                <span class="font-bold text-emerald-600 dark:text-emerald-400 font-mono">📈 BUSINESS IMPACT:</span> ${p.impact}
-                            </div>
-                        </div>
-
-                        <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-4">
-                            <span class="text-xs text-slate-500 font-mono">Includes: Overview • Data • Challenges • Walkthrough • Takeaways</span>
-                            <button onclick="openModal(${p.id})" class="px-5 py-2.5 rounded-xl bg-sky-500 text-slate-950 font-bold text-xs font-mono hover:bg-sky-400 transition shadow-sm">
-                                Read Full Case Study →
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function openModal(id) {
-            const p = FLAGSHIP_PROJECTS.find(x => x.id === id);
-            if (!p) return;
-            document.getElementById('mIndustry').textContent = p.industry;
-            document.getElementById('mRole').textContent = p.role;
-            document.getElementById('mTitle').textContent = p.title;
-            document.getElementById('mImage').src = p.img;
-            document.getElementById('mImpactBanner').textContent = p.impact;
-            document.getElementById('mUsers').textContent = p.users;
-            document.getElementById('mStack').innerHTML = p.stack.map(s => `<span class="px-2.5 py-1 rounded bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-mono">${s}</span>`).join('');
-            document.getElementById('mOverview').textContent = p.overview;
-            document.getElementById('mData').textContent = p.data;
-            document.getElementById('mChallenges').textContent = p.challenges;
-            document.getElementById('mWalkthrough').textContent = p.walkthrough;
-            document.getElementById('mTakeaways').textContent = p.takeaways;
-            document.getElementById('mSql').textContent = p.sql;
-
-            document.getElementById('caseModal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('caseModal').classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        function toggleArchive() {
-            const sec = document.getElementById('archiveSection');
-            const btn = document.getElementById('archiveBtn');
-            if (sec.classList.contains('hidden')) {
-                sec.classList.remove('hidden');
-                btn.textContent = '📂 Hide Additional Industry Case Study Blueprints ▲';
-            } else {
-                sec.classList.add('hidden');
-                btn.textContent = '📂 Show 12 Additional Industry Case Study Blueprints (Logistics, Healthcare, Manufacturing, SaaS) ▼';
-            }
-        }
-
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
-
         function toggleTheme() {
             const html = document.documentElement;
             const icon = document.getElementById('themeIcon');
             if (html.classList.contains('dark')) {
                 html.classList.remove('dark');
-                icon.textContent = '🌙 Dark Mode';
+                if (icon) icon.textContent = '🌙 Dark';
                 localStorage.setItem('theme', 'light');
             } else {
                 html.classList.add('dark');
-                icon.textContent = '☀️ Light Mode';
+                if (icon) icon.textContent = '☀️ Light';
                 localStorage.setItem('theme', 'dark');
             }
         }
-
-        (function init() {
+        (function initTheme() {
             const saved = localStorage.getItem('theme');
+            const icon = document.getElementById('themeIcon');
             if (saved === 'light') {
                 document.documentElement.classList.remove('dark');
-                document.getElementById('themeIcon').textContent = '🌙 Dark Mode';
+                if (icon) icon.textContent = '🌙 Dark';
             }
-            renderFlagships();
         })();
     </script>
 </body>
