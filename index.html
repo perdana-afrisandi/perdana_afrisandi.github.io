@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perdana Afrisandi | Data Quality & Analytics Portfolio</title>
+    <title>Perdana Afrisandi | Data Analytics, Data Quality & Semi-AI Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
@@ -17,72 +18,105 @@
                         mono: ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        dark: '#0B0F19',
-                        card: '#111827',
-                        accent: '#38BDF8',
+                        darkBg: '#0B0F19',
+                        darkCard: '#111827',
                     }
                 }
             }
         }
     </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.1); }
+        ::-webkit-scrollbar-thumb { background: rgba(100, 116, 139, 0.4); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(56, 189, 248, 0.6); }
+    </style>
 </head>
-<body class="bg-dark text-slate-200 font-sans antialiased selection:bg-sky-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 dark:bg-darkBg dark:text-slate-200 font-sans antialiased transition-colors duration-300 selection:bg-sky-500 selection:text-white">
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-tight text-white">
-                Perdana<span class="text-sky-400">.data</span>
+    <!-- ========================================================================= -->
+    <!-- TOP CONFIDENTIALITY & SYNTHETIC DATA BANNER                               -->
+    <!-- ========================================================================= -->
+    <div class="bg-sky-500/10 border-b border-sky-500/20 px-4 py-2 text-center text-xs font-mono text-sky-700 dark:text-sky-300">
+        🛡️ <strong>100% Synthetic & Public Datasets:</strong> All case studies, schemas, and metrics in this portfolio use simulated or public data to strictly protect enterprise confidentiality.
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- NAVBAR (WITH DARK / LIGHT MODE SWITCHER)                                  -->
+    <!-- ========================================================================= -->
+    <nav class="sticky top-0 w-full z-40 bg-white/85 dark:bg-darkBg/85 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-sky-500 inline-block"></span>
+                Perdana<span class="text-sky-500 font-mono">.analytics</span>
             </a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-sky-400 transition">About</a>
-                <a href="#skills" class="hover:text-sky-400 transition">Tech Stack</a>
-                <a href="#projects" class="hover:text-sky-400 transition">Case Studies</a>
-                <a href="#methodology" class="hover:text-sky-400 transition">Approach</a>
+
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#about" class="hover:text-sky-500 transition">About</a>
+                <a href="#differentiator" class="hover:text-sky-500 transition">Semi-AI & DQ Edge</a>
+                <a href="#projects" class="hover:text-sky-500 transition">22+ Case Studies</a>
+                <a href="#Simulator" class="hover:text-sky-500 transition">ROI Simulator</a>
+                <a href="#methodology" class="hover:text-sky-500 transition">Framework</a>
             </div>
-            <a href="#contact" class="px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 text-sm font-medium hover:bg-sky-500 hover:text-slate-950 transition">
-                Get in Touch
-            </a>
+
+            <div class="flex items-center space-x-3">
+                <!-- DARK / LIGHT MODE TOGGLE BUTTON -->
+                <button id="themeToggle" onclick="toggleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-300 border border-slate-200 dark:border-slate-700 hover:border-sky-400 transition" title="Switch Dark / Light Mode">
+                    <span id="themeIcon">☀️ Light</span>
+                </button>
+                <a href="#contact" class="hidden sm:inline-block px-4 py-2.5 rounded-xl bg-sky-500 text-slate-950 text-sm font-semibold hover:bg-sky-400 transition shadow-sm">
+                    Let's Connect
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="about" class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-7 space-y-6">
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span>TELECOM DATA MANAGEMENT & QUALITY ASSURANCE</span>
+    <!-- ========================================================================= -->
+    <!-- HERO SECTION                                                              -->
+    <!-- ========================================================================= -->
+    <section id="about" class="pt-16 pb-20 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>DATA ANALYST • DATA QUALITY ENGINEER • SEMI-AI BUILDER</span>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">Perdana Afrisandi</span>
+
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                    Turning Trusted Data Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-500">Measurable Business Impact.</span>
                 </h1>
-                <p class="text-lg text-slate-400 leading-relaxed">
-                    Professional specializing in <strong>Data Quality Control, BigQuery Data Reconciliation, and Business Intelligence</strong> within the telecommunications industry (Indosat Ooredoo Hutchison). I build reliable data monitoring frameworks, automated validation pipelines, and interactive control towers that turn complex datasets into trusted business decisions.
+
+                <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Hi, I'm <strong>Perdana Afrisandi</strong>. Most dashboards fail not because the charts look bad, but because the underlying data is unvalidated or disconnected from commercial decisions. I combine <strong>Enterprise Data Quality (DQ)</strong>, <strong>BigQuery/Impala SQL Modeling</strong>, <strong>Root-Cause Business Analysis</strong>, and <strong>Deterministic Semi-AI Chatbots</strong> to solve real-world problems across Fintech, Retail, Banking, Telecom, and Supply Chain.
                 </p>
-                
-                <!-- Quick Highlights -->
-                <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800/80">
-                    <div>
-                        <div class="text-2xl font-bold text-white font-mono">58+</div>
-                        <div class="text-xs text-slate-400">Martech Attributes Monitored</div>
+
+                <!-- Key Metrics Bar -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <div class="p-3 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="text-2xl font-extrabold text-sky-500 font-mono">22</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">End-to-End Case Studies</div>
                     </div>
-                    <div>
-                        <div class="text-2xl font-bold text-sky-400 font-mono">BigQuery</div>
-                        <div class="text-xs text-slate-400">UDP 1 & UDP 2 Reconciliation</div>
+                    <div class="p-3 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="text-2xl font-extrabold text-indigo-500 font-mono">10+</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">Industries Covered</div>
                     </div>
-                    <div>
-                        <div class="text-2xl font-bold text-indigo-400 font-mono">End-to-End</div>
-                        <div class="text-xs text-slate-400">BI & Revenue Assurance</div>
+                    <div class="p-3 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="text-2xl font-extrabold text-emerald-500 font-mono">DQ-First</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">Validated SQL Pipelines</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="text-2xl font-extrabold text-amber-500 font-mono">Semi-AI</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">SQL + Guardrailed LLM</div>
                     </div>
                 </div>
 
                 <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#projects" class="px-6 py-3 rounded-lg bg-sky-500 text-slate-950 font-semibold hover:bg-sky-400 transition">
-                        Explore Case Studies →
+                    <a href="#projects" class="px-6 py-3.5 rounded-xl bg-sky-500 text-slate-950 font-bold hover:bg-sky-400 transition shadow-md">
+                        Explore 22 Case Studies →
                     </a>
-                    <a href="#contact" class="px-6 py-3 rounded-lg bg-slate-800 text-white font-medium hover:bg-slate-700 transition">
-                        Contact & Links
+                    <a href="#differentiator" class="px-6 py-3.5 rounded-xl bg-white dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 font-semibold hover:border-sky-400 transition">
+                        See My Semi-AI Architecture
                     </a>
                 </div>
             </div>
@@ -93,17 +127,22 @@
             <!-- Nanti malam, simpan foto/gambarmu di folder yang sama (misal: profil.jpg) -->
             <!-- lalu ganti bagian src="https://..." menjadi src="profil.jpg"              -->
             <!-- ========================================================================= -->
-            <div class="md:col-span-5 flex justify-center">
-                <div class="relative group w-full">
+            <div class="lg:col-span-5">
+                <div class="relative group">
                     <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition"></div>
-                    <div class="relative bg-card border border-slate-800 rounded-2xl p-4">
+                    <div class="relative bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-xl">
                         <!-- GANTI SRC GAMBAR PROFIL DI BARIS BAWAH INI -->
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" 
                              alt="Perdana Afrisandi Portfolio Preview" 
-                             class="rounded-xl w-full h-72 object-cover">
-                        <div class="mt-4 flex justify-between items-center text-xs font-mono text-slate-400">
-                            <span>📍 Jakarta, Indonesia</span>
-                            <span class="text-sky-400">Div. Data Management Eng.</span>
+                             class="rounded-xl w-full h-72 object-cover border border-slate-200 dark:border-slate-800">
+                        <div class="mt-4 space-y-2">
+                            <div class="flex justify-between items-center text-xs font-mono text-slate-500 dark:text-slate-400">
+                                <span>📍 Jakarta, Indonesia</span>
+                                <span class="px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 font-semibold">macOS / Cloud Native</span>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-100 dark:bg-slate-900/90 text-xs font-mono text-slate-600 dark:text-slate-300">
+                                <span class="text-emerald-500">✔ Core Stack:</span> BigQuery • Impala • Python • SQL • Looker Studio • Streamlit • Semi-AI Agents
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,236 +150,1004 @@
         </div>
     </section>
 
-    <!-- TECH STACK SECTION -->
-    <section id="skills" class="py-16 bg-slate-900/50 border-y border-slate-800/80 px-6">
+    <!-- ========================================================================= -->
+    <!-- UNIQUE DIFFERENTIATOR SECTION (LEBIH BAGUS DARI MBIILE.COM!)              -->
+    <!-- ========================================================================= -->
+    <section id="differentiator" class="py-16 bg-slate-100/80 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">Why My Approach Stands Out</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-2">The "Trusted Analytics + Semi-AI" Advantage</h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+                    Unlike standard portfolios that only show static charts, every project I build integrates three enterprise pillars that prevent "Garbage-In, Garbage-Out" decisions.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-mono font-bold mb-4">01</div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Data Quality (DQ) Gate First</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Before calculating any business KPI, my pipelines run automated SQL validation rules (checking null drift, primary key duplicates, cross-table reconciliation, and schema parity). Stakeholders get a <strong>Data Trust Score</strong> alongside their dashboard.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-sky-500/40 shadow-md relative">
+                    <span class="absolute top-4 right-4 text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500 text-slate-950 font-bold">SIGNATURE FEATURE</span>
+                    <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center font-mono font-bold mb-4">02</div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Deterministic Semi-AI Chatbot</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pure LLMs hallucinate numbers. My <strong>Semi-AI Assistant</strong> uses <em>Intent Routing + Parameterized SQL Templates + Python Math</em> to compute 100% exact figures, then uses AI strictly as a narrative layer to explain root causes and action items to business users.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center font-mono font-bold mb-4">03</div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Root-Cause to P&L Simulation</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Every analysis moves beyond <em>"What happened?"</em> to <em>"Why did it happen, who owns the action, and how much Rp/USD will we save?"</em>—backed by transparent baseline vs. incremental formulas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 22+ PROJECTS SHOWCASE WITH FILTER & SEARCH + DEEP-DIVE CASE STUDY MODAL   -->
+    <!-- ========================================================================= -->
+    <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+            <div>
+                <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">Interactive Case Study Library</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-1">22 Enterprise Data & Analytics Projects</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">
+                    Click <strong>"Read Full Case Study →"</strong> on any project to inspect its 5-stage breakdown: <em>Overview, Data & Schema, Challenges, Analytical Walkthrough, & Key Takeaways</em>.
+                </p>
+            </div>
+            <div class="w-full md:w-72">
+                <input id="searchInput" oninput="renderProjects()" type="text" placeholder="🔍 Search project, KPI, or industry..." 
+                       class="w-full px-4 py-2.5 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:border-sky-500">
+            </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div id="categoryFilters" class="flex flex-wrap gap-2 mb-10">
+            <button onclick="setCategory('ALL')" data-cat="ALL" class="cat-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-sky-500 text-slate-950 transition">All Projects (22)</button>
+            <button onclick="setCategory('Flagship AI & DQ')" data-cat="Flagship AI & DQ" class="cat-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition">⭐ Flagship AI & DQ (7)</button>
+            <button onclick="setCategory('Fintech & Banking')" data-cat="Fintech & Banking" class="cat-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition">💳 Fintech & Banking (4)</button>
+            <button onclick="setCategory('Retail, FMCG & E-Commerce')" data-cat="Retail, FMCG & E-Commerce" class="cat-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition">🛒 Retail, FMCG & E-Com (4)</button>
+            <button onclick="setCategory('Logistics & Manufacturing')" data-cat="Logistics & Manufacturing" class="cat-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition">🚚 Logistics & Manufacturing (3)</button>
+            <button onclick="setCategory('Healthcare, Energy & SaaS')" data-cat="Healthcare, Energy & SaaS" class="cat-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition">🏥 Healthcare, Energy & SaaS (4)</button>
+        </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- BONUS FEATURE: INTERACTIVE BUSINESS IMPACT & ROI SIMULATOR                -->
+    <!-- ========================================================================= -->
+    <section id="Simulator" class="py-16 bg-slate-100/80 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-xs font-mono uppercase tracking-widest text-sky-400 mb-2">Core Competencies</h2>
-            <h3 class="text-2xl font-bold text-white mb-8">Tools & Technical Capabilities</h3>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="p-5 rounded-xl bg-card border border-slate-800">
-                    <div class="text-sky-400 font-mono text-sm font-semibold mb-2">01 / Data & Cloud</div>
-                    <div class="text-white font-bold mb-1">Google BigQuery & SQL</div>
-                    <p class="text-xs text-slate-400">Complex reconciliation queries, null/duplicate detection, distribution checks, and multi-table staging validation.</p>
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-6 space-y-4">
+                    <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">Interactive Value Calculator</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                        Simulate How Data Quality & Analytics Impact the Bottom Line
+                    </h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        In real enterprise environments, analytics isn't judged by the number of charts—it's judged by <strong>revenue protected, costs avoided, and margin recovered</strong>. Use this interactive calculator to test the financial formula behind my top projects.
+                    </p>
+                    <div class="space-y-4 pt-2">
+                        <div>
+                            <label class="flex justify-between text-xs font-mono mb-1">
+                                <span>Monthly Transaction / Promo Volume (IDR Billions):</span>
+                                <strong id="volVal" class="text-sky-500">Rp 100 Billion</strong>
+                            </label>
+                            <input id="simVolume" type="range" min="10" max="500" step="10" value="100" oninput="updateSimulator()" class="w-full accent-sky-500">
+                        </div>
+                        <div>
+                            <label class="flex justify-between text-xs font-mono mb-1">
+                                <span>Baseline Leakage / Inefficient Spend Rate (%):</span>
+                                <strong id="leakVal" class="text-amber-500">3.5%</strong>
+                            </label>
+                            <input id="simLeakage" type="range" min="0.5" max="10" step="0.5" value="3.5" oninput="updateSimulator()" class="w-full accent-sky-500">
+                        </div>
+                        <div>
+                            <label class="flex justify-between text-xs font-mono mb-1">
+                                <span>Recovery / Optimization Efficiency via DQ & Analytics (%):</span>
+                                <strong id="recVal" class="text-emerald-500">45%</strong>
+                            </label>
+                            <input id="simRecovery" type="range" min="10" max="80" step="5" value="45" oninput="updateSimulator()" class="w-full accent-sky-500">
+                        </div>
+                    </div>
                 </div>
-                <div class="p-5 rounded-xl bg-card border border-slate-800">
-                    <div class="text-indigo-400 font-mono text-sm font-semibold mb-2">02 / BI & Interactive Apps</div>
-                    <div class="text-white font-bold mb-1">Looker Studio & Streamlit</div>
-                    <p class="text-xs text-slate-400">Executive control towers, anomaly visualization, and interactive Python-based data apps.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-card border border-slate-800">
-                    <div class="text-emerald-400 font-mono text-sm font-semibold mb-2">03 / Automation & Web</div>
-                    <div class="text-white font-bold mb-1">Google Apps Script</div>
-                    <p class="text-xs text-slate-400">Automated enterprise web dashboards connected directly to BigQuery for daily DQ monitoring.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-card border border-slate-800">
-                    <div class="text-amber-400 font-mono text-sm font-semibold mb-2">04 / Domain Expertise</div>
-                    <div class="text-white font-bold mb-1">Data Quality & Rev Assurance</div>
-                    <p class="text-xs text-slate-400">Drift monitoring, SLA tracking, Martech customer attribute accuracy, and telecom operations.</p>
+
+                <div class="lg:col-span-6">
+                    <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 shadow-lg space-y-6">
+                        <div class="flex justify-between items-center border-b border-slate-200 dark:border-slate-800 pb-4">
+                            <span class="text-xs font-mono text-slate-500">ESTIMATED BUSINESS VALUE</span>
+                            <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-500 text-xs font-mono font-bold">DETERMINISTIC FORMULA</span>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                                <div class="text-xs text-slate-500">Monthly Leakage / Waste Detected</div>
+                                <div id="outDetected" class="text-2xl font-extrabold text-amber-500 font-mono mt-1">Rp 3.50 B</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
+                                <div class="text-xs text-emerald-600 dark:text-emerald-400">Net Monthly Margin / Cash Saved</div>
+                                <div id="outSavedMonthly" class="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono mt-1">Rp 1.58 B</div>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-sky-500/10 border border-sky-500/30 flex justify-between items-center">
+                            <div>
+                                <div class="text-xs text-sky-600 dark:text-sky-300 font-medium">Projected Annualized P&L Impact</div>
+                                <div class="text-[11px] text-slate-500">Directly auditable by Finance & Operations</div>
+                            </div>
+                            <div id="outSavedAnnual" class="text-2xl sm:text-3xl font-extrabold text-sky-500 font-mono">Rp 18.90 B / yr</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS / CASE STUDIES SECTION -->
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="mb-12">
-            <h2 class="text-xs font-mono uppercase tracking-widest text-sky-400 mb-2">Featured Work</h2>
-            <h3 class="text-3xl font-bold text-white">End-to-End Data Case Studies</h3>
-            <p class="text-slate-400 mt-2">Real-world architectures & portfolio projects focused on data reliability, reconciliation, and analytics.</p>
+    <!-- ========================================================================= -->
+    <!-- METHODOLOGY SECTION                                                       -->
+    <!-- ========================================================================= -->
+    <section id="methodology" class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="mb-10">
+            <span class="text-xs font-mono uppercase tracking-widest text-sky-500 font-bold">Case Study Architecture</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">How Every Project Is Structured (The 5-Stage Standard)</h2>
         </div>
-
-        <div class="space-y-12">
-
-            <!-- ========================================================================= -->
-            <!-- PROJECT 1: Revenue Assurance & Data Reliability Control Tower             -->
-            <!-- ========================================================================= -->
-            <div class="grid md:grid-cols-12 gap-8 bg-card border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-sky-500/40 transition">
-                <div class="md:col-span-5">
-                    <!-- ================================================================= -->
-                    <!-- [UPLOAD GAMBAR DI SINI - PROJECT 1: REVENUE ASSURANCE]            -->
-                    <!-- Taruh screenshot Streamlit / Looker Studio di folder projectmu    -->
-                    <!-- (contoh: project1-rev-assurance.png) lalu ubah src="..." di bawah -->
-                    <!-- ================================================================= -->
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" 
-                         alt="Revenue Assurance Control Tower" 
-                         class="w-full h-64 object-cover rounded-xl border border-slate-800">
-                </div>
-                <div class="md:col-span-7 flex flex-col justify-between space-y-4">
-                    <div>
-                        <div class="flex items-center space-x-3 text-xs font-mono text-sky-400 mb-2">
-                            <span>PORTFOLIO FLAGSHIP</span>
-                            <span>•</span>
-                            <span>BI & DATA RELIABILITY</span>
-                        </div>
-                        <h4 class="text-2xl font-bold text-white mb-3">
-                            Revenue Assurance & Data Reliability Control Tower
-                        </h4>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                            An end-to-end analytical control tower designed to detect revenue leakage, monitor transaction integrity, and track data quality SLAs. Built to bridge technical SQL validation checks with executive-level business impact visibility.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 mb-4 list-disc list-inside">
-                            <li>Automated reconciliation rules for transaction volume & billing discrepancies (CDR vs. Billing vs. DWH).</li>
-                            <li>Interactive exploration built with <strong>Streamlit</strong> & executive views on <strong>Looker Studio</strong>.</li>
-                            <li>Proactive anomaly flagging for missing records, schema drift, and delayed feeds.</li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800">
-                        <div class="flex flex-wrap gap-2 text-xs font-mono">
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-sky-300">SQL</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-sky-300">Streamlit</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-sky-300">Looker Studio</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-sky-300">Python</span>
-                        </div>
-                        <a href="#" class="text-sm font-semibold text-sky-400 hover:underline">View Case Study →</a>
-                    </div>
-                </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                <span class="text-xs font-mono text-sky-500 font-bold">01 / OVERVIEW</span>
+                <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Business Problem</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400">What is hurting revenue, margin, or cashflow, and which stakeholder owns the decision?</p>
             </div>
-
-            <!-- ========================================================================= -->
-            <!-- PROJECT 2: Adobe Martech 58-Attribute Data Quality Dashboard              -->
-            <!-- ========================================================================= -->
-            <div class="grid md:grid-cols-12 gap-8 bg-card border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-sky-500/40 transition">
-                <div class="md:col-span-5">
-                    <!-- ================================================================= -->
-                    <!-- [UPLOAD GAMBAR DI SINI - PROJECT 2: ADOBE MARTECH DQ DASHBOARD]   -->
-                    <!-- Taruh screenshot dashboard DQ Martech di folder projectmu         -->
-                    <!-- (contoh: project2-martech-dq.png) lalu ubah src="..." di bawah    -->
-                    <!-- ================================================================= -->
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" 
-                         alt="Adobe Martech 58-Attribute DQ Dashboard" 
-                         class="w-full h-64 object-cover rounded-xl border border-slate-800">
-                </div>
-                <div class="md:col-span-7 flex flex-col justify-between space-y-4">
-                    <div>
-                        <div class="flex items-center space-x-3 text-xs font-mono text-emerald-400 mb-2">
-                            <span>ENTERPRISE DASHBOARD</span>
-                            <span>•</span>
-                            <span>MARTECH DATA QUALITY</span>
-                        </div>
-                        <h4 class="text-2xl font-bold text-white mb-3">
-                            DQ Attribute Adobe Martech (58-Attribute Monitoring)
-                        </h4>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                            An enterprise-grade Data Quality monitoring web application built on Google Apps Script and Google BigQuery. Tracks daily data health, distribution drift, and anomalies across 58 critical customer attributes to ensure high-precision marketing campaign targeting.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 mb-4 list-disc list-inside">
-                            <li>Real-time monitoring of null rates, distinct counts, and value distribution shifts across 58 attributes.</li>
-                            <li>Direct BigQuery integration with interactive filtering, trend visualization, and threshold alerts.</li>
-                            <li>Safeguards downstream Adobe Martech segmentation from corrupted or incomplete customer profiles.</li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800">
-                        <div class="flex flex-wrap gap-2 text-xs font-mono">
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300">Google BigQuery</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300">Google Apps Script</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300">JavaScript/HTML</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300">Data Quality</span>
-                        </div>
-                        <a href="#" class="text-sm font-semibold text-sky-400 hover:underline">View Architecture →</a>
-                    </div>
-                </div>
+            <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                <span class="text-xs font-mono text-indigo-500 font-bold">02 / DATA & MODEL</span>
+                <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Star Schema & Grain</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400">Fact vs. Dimension tables, data sources, grain definitions, and key metrics formulas.</p>
             </div>
-
-            <!-- ========================================================================= -->
-            <!-- PROJECT 3: UDP 1 & UDP 2 BigQuery Data Reconciliation                     -->
-            <!-- ========================================================================= -->
-            <div class="grid md:grid-cols-12 gap-8 bg-card border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-sky-500/40 transition">
-                <div class="md:col-span-5">
-                    <!-- ================================================================= -->
-                    <!-- [UPLOAD GAMBAR DI SINI - PROJECT 3: UDP 1 & UDP 2 RECONCILIATION] -->
-                    <!-- Taruh screenshot query/hasil rekonsiliasi di folder projectmu     -->
-                    <!-- (contoh: project3-udp-recon.png) lalu ubah src="..." di bawah     -->
-                    <!-- ================================================================= -->
-                    <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=900&q=80" 
-                         alt="UDP 1 and UDP 2 BigQuery Reconciliation" 
-                         class="w-full h-64 object-cover rounded-xl border border-slate-800">
-                </div>
-                <div class="md:col-span-7 flex flex-col justify-between space-y-4">
-                    <div>
-                        <div class="flex items-center space-x-3 text-xs font-mono text-indigo-400 mb-2">
-                            <span>DATA ENGINEERING & VALIDATION</span>
-                            <span>•</span>
-                            <span>PLATFORM MIGRATION</span>
-                        </div>
-                        <h4 class="text-2xl font-bold text-white mb-3">
-                            UDP 1 vs. UDP 2 BigQuery Storage Reconciliation
-                        </h4>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                            Comprehensive cross-platform data validation and reconciliation framework comparing legacy (UDP 1) and modern (UDP 2) storage layers in Google BigQuery across multiple staging and primary production tables.
-                        </p>
-                        <ul class="text-xs text-slate-300 space-y-1.5 mb-4 list-disc list-inside">
-                            <li>Engineered standardized SQL validation templates checking row volume parity, primary key duplicates, and null ratios.</li>
-                            <li>Automated discrepancy isolation to pinpoint root causes across ingestion and transformation layers.</li>
-                            <li>Accelerated migration sign-off by providing clear, auditable reconciliation scorecards.</li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-800">
-                        <div class="flex flex-wrap gap-2 text-xs font-mono">
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-indigo-300">BigQuery SQL</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-indigo-300">Data Reconciliation</span>
-                            <span class="px-2.5 py-1 rounded bg-slate-800 text-indigo-300">ETL Validation</span>
-                        </div>
-                        <a href="#" class="text-sm font-semibold text-sky-400 hover:underline">View SQL Framework →</a>
-                    </div>
-                </div>
+            <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                <span class="text-xs font-mono text-amber-500 font-bold">03 / CHALLENGES</span>
+                <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Data Quality Traps</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400">How we handled late events, null attributes, duplicate IDs, and survivorship bias.</p>
             </div>
-
-        </div>
-    </section>
-
-    <!-- METHODOLOGY SECTION (ALA MBIILE.COM) -->
-    <section id="methodology" class="py-16 bg-slate-900/50 border-t border-slate-800 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-xs font-mono uppercase tracking-widest text-sky-400 mb-2">How I Work</h2>
-            <h3 class="text-2xl font-bold text-white mb-8">Data Reliability & Analytics Approach</h3>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="p-5 rounded-xl bg-dark border border-slate-800">
-                    <span class="text-xs font-mono text-sky-400">STEP 01</span>
-                    <h4 class="text-lg font-bold text-white mt-1 mb-2">Profile & Audit</h4>
-                    <p class="text-xs text-slate-400">Inspect source schemas, baseline row counts, null distributions, and business SLA rules in BigQuery.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-dark border border-slate-800">
-                    <span class="text-xs font-mono text-sky-400">STEP 02</span>
-                    <h4 class="text-lg font-bold text-white mt-1 mb-2">Reconcile & Validate</h4>
-                    <p class="text-xs text-slate-400">Write modular SQL checks to compare staging vs. production (UDP 1 & UDP 2) and isolate anomalies.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-dark border border-slate-800">
-                    <span class="text-xs font-mono text-sky-400">STEP 03</span>
-                    <h4 class="text-lg font-bold text-white mt-1 mb-2">Automate Monitoring</h4>
-                    <p class="text-xs text-slate-400">Deploy continuous tracking via Apps Script, Streamlit, or Looker Studio to catch data drift early.</p>
-                </div>
-                <div class="p-5 rounded-xl bg-dark border border-slate-800">
-                    <span class="text-xs font-mono text-sky-400">STEP 04</span>
-                    <h4 class="text-lg font-bold text-white mt-1 mb-2">Drive Action</h4>
-                    <p class="text-xs text-slate-400">Translate technical discrepancies into clear operational insights for engineering and business teams.</p>
-                </div>
+            <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                <span class="text-xs font-mono text-emerald-500 font-bold">04 / WALKTHROUGH</span>
+                <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Root-Cause & Semi-AI</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400">Step-by-step SQL exploration, statistical hypothesis testing, and Semi-AI chatbot queries.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800">
+                <span class="text-xs font-mono text-rose-500 font-bold">05 / TAKEAWAYS</span>
+                <h4 class="font-bold text-slate-900 dark:text-white mt-1 mb-2">Decision & ROI</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400">Concrete operational recommendations and quantified financial impact.</p>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER / CONTACT -->
-    <footer id="contact" class="py-16 px-6 max-w-6xl mx-auto text-center">
-        <h3 class="text-2xl font-bold text-white mb-3">Let's Connect</h3>
-        <p class="text-slate-400 text-sm max-w-md mx-auto mb-6">
-            Interested in discussing Data Quality, BigQuery Reconciliation, Revenue Assurance, or Business Intelligence projects?
+    <!-- ========================================================================= -->
+    <!-- FOOTER / CONTACT                                                          -->
+    <!-- ========================================================================= -->
+    <footer id="contact" class="py-16 px-6 border-t border-slate-200 dark:border-slate-800 text-center max-w-5xl mx-auto">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">Ready to Build Trusted Analytics Together?</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm max-w-xl mx-auto mb-6">
+            Available for discussions on Data Analysis, Data Quality Engineering, BigQuery/Impala Modeling, and Semi-AI Business Intelligence solutions.
         </p>
-        <div class="flex justify-center space-x-4 mb-10">
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
             <!-- GANTI LINK EMAIL, LINKEDIN, & GITHUB DI SINI -->
-            <a href="mailto:MC52207521@ioh.co.id" class="px-5 py-2.5 rounded-lg bg-sky-500 text-slate-950 font-semibold text-sm hover:bg-sky-400 transition">
-                Email Me
+            <a href="mailto:perdana.afrisandi@email.com" class="px-6 py-3 rounded-xl bg-sky-500 text-slate-950 font-bold text-sm hover:bg-sky-400 transition">
+                ✉️ Email Me
             </a>
-            <a href="https://linkedin.com" target="_blank" class="px-5 py-2.5 rounded-lg bg-card border border-slate-700 text-slate-200 text-sm hover:border-sky-400 transition">
-                LinkedIn
+            <a href="https://linkedin.com" target="_blank" class="px-6 py-3 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-sm font-semibold hover:border-sky-400 transition">
+                🔗 LinkedIn Profile
             </a>
-            <a href="https://github.com" target="_blank" class="px-5 py-2.5 rounded-lg bg-card border border-slate-700 text-slate-200 text-sm hover:border-sky-400 transition">
-                GitHub
+            <a href="https://github.com" target="_blank" class="px-6 py-3 rounded-xl bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 text-sm font-semibold hover:border-sky-400 transition">
+                💻 GitHub Repositories
             </a>
         </div>
-        <div class="text-xs text-slate-600 font-mono">
-            © 2026 Perdana Afrisandi. Built with HTML & Tailwind CSS.
+        <div class="text-xs text-slate-500 font-mono">
+            © 2026 Perdana Afrisandi • 100% Synthetic Portfolio Datasets • Built with HTML, Tailwind CSS & Vanilla JS.
         </div>
     </footer>
 
+    <!-- ========================================================================= -->
+    <!-- FULL-SCREEN INTERACTIVE CASE STUDY MODAL (ALA MBIILE.COM + UPGRADED!)     -->
+    <!-- ========================================================================= -->
+    <div id="caseModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm overflow-y-auto p-4 sm:p-8">
+        <div class="max-w-5xl mx-auto bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden my-6">
+            
+            <!-- Modal Header -->
+            <div class="p-6 sm:p-8 border-b border-slate-200 dark:border-slate-800 flex justify-between items-start gap-4 bg-slate-50 dark:bg-slate-900/70">
+                <div>
+                    <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-sky-500 mb-2">
+                        <span id="mIndustry" class="px-2.5 py-0.5 rounded bg-sky-500/10 font-bold"></span>
+                        <span>•</span>
+                        <span id="mScore" class="text-emerald-500 font-semibold"></span>
+                        <span>•</span>
+                        <span id="mEffort" class="text-slate-500"></span>
+                    </div>
+                    <h2 id="mTitle" class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white"></h2>
+                </div>
+                <button onclick="closeModal()" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-rose-500 hover:text-white transition font-mono text-sm">
+                    ✕ ESC
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 sm:p-8 space-y-8">
+                <!-- Screenshot Preview Banner -->
+                <div class="grid md:grid-cols-12 gap-6 items-center bg-slate-100 dark:bg-slate-900/60 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <div class="md:col-span-7">
+                        <img id="mImage" src="" alt="Project Dashboard Screenshot" class="w-full h-64 object-cover rounded-lg border border-slate-300 dark:border-slate-700">
+                    </div>
+                    <div class="md:col-span-5 space-y-3">
+                        <div class="text-xs font-mono uppercase text-sky-500 font-bold">Dashboard & Architecture Preview</div>
+                        <p id="mImpactBanner" class="text-sm font-semibold text-slate-800 dark:text-slate-200"></p>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">
+                            <strong>Target Users:</strong> <span id="mUsers"></span>
+                        </div>
+                        <div id="mStack" class="flex flex-wrap gap-1.5 pt-2"></div>
+                    </div>
+                </div>
+
+                <!-- 5-Stage Case Study Tabs (Overview, Data, Challenges, Walkthrough, Key Takeaways) -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- 1. OVERVIEW -->
+                    <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-sky-500 font-bold mb-1">01 / OVERVIEW & BUSINESS CONTEXT</div>
+                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">Why This Problem Matters</h4>
+                        <p id="mOverview" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+
+                    <!-- 2. DATA & SCHEMA -->
+                    <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-indigo-500 font-bold mb-1">02 / DATA SOURCES & STAR SCHEMA</div>
+                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">Synthetic Dataset & Modeling</h4>
+                        <p id="mData" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+
+                    <!-- 3. CHALLENGES (DQ TRAPS) -->
+                    <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-amber-500 font-bold mb-1">03 / DATA QUALITY & TECHNICAL CHALLENGES</div>
+                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">Real-World Traps Solved</h4>
+                        <p id="mChallenges" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+
+                    <!-- 4. WALKTHROUGH & SEMI-AI -->
+                    <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+                        <div class="text-xs font-mono text-emerald-500 font-bold mb-1">04 / ANALYTICAL WALKTHROUGH & SEMI-AI</div>
+                        <h4 class="font-bold text-slate-900 dark:text-white mb-2">How Root Causes Were Isolated</h4>
+                        <p id="mWalkthrough" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+                    </div>
+                </div>
+
+                <!-- 5. KEY TAKEAWAYS & EXECUTIVE DECISION -->
+                <div class="p-6 rounded-xl bg-emerald-500/10 border border-emerald-500/30 space-y-2">
+                    <div class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold">05 / KEY TAKEAWAYS & EXECUTIVE DECISION IMPACT</div>
+                    <h4 class="text-lg font-bold text-slate-900 dark:text-white">Action Taken & Quantified ROI</h4>
+                    <p id="mTakeaways" class="text-sm text-slate-700 dark:text-slate-200 leading-relaxed"></p>
+                </div>
+
+                <!-- SQL & Semi-AI Prompt Snippet -->
+                <div class="p-5 rounded-xl bg-slate-900 text-slate-200 font-mono text-xs overflow-x-auto border border-slate-800">
+                    <div class="text-sky-400 font-bold mb-2">// Sample Deterministic SQL / Semi-AI Intent Logic Used in This Project</div>
+                    <pre id="mSql" class="whitespace-pre-wrap leading-relaxed text-slate-300"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- JAVASCRIPT: 22 PROJECTS DATABASE + MODAL + FILTER + THEME SWITCHER        -->
+    <!-- ========================================================================= -->
+    <script>
+        // =========================================================================
+        // [UPLOAD GAMBAR DI SINI - DAFTAR 22 PROYEK PORTOFOLIO]
+        // Semua atribut `img:` di bawah ini menggunakan URL gambar dummy Unsplash.
+        // Nanti malam, kamu bisa mengganti `img: "https://..."` menjadi nama file
+        // screenshot asli milikmu, misalnya: `img: "ss-customer360.png"`
+        // =========================================================================
+        const PROJECTS = [
+            {
+                id: 1,
+                title: "Customer 360 Intelligence Platform (with Semi-AI Assistant)",
+                category: "Flagship AI & DQ",
+                industry: "Cross-Industry / Omnichannel CRM",
+                score: "50/50 Flagship",
+                effort: "3 Weeks • Advanced",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 1: CUSTOMER 360 INTELLIGENCE PLATFORM]
+                img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+                users: "CRM Director, Growth Marketing, Customer Value Management (CVM), Product Analytics",
+                impact: "Unified 5 siloed customer touchpoints into a single Golden Record; boosted retention campaign conversion by +22% and cut wasted promo spend by Rp 480M/quarter.",
+                stack: ["BigQuery SQL", "Python", "Entity Resolution", "Streamlit", "Semi-AI Chatbot", "Looker Studio"],
+                overview: "Companies often store customer data across separate silos: app transactions, website clicks, loyalty tiers, customer support tickets, and campaign responses. Marketing teams end up sending acquisition promos to frustrated customers who currently have unresolved support complaints. This project builds an end-to-end Customer 360 Golden Record coupled with a guardrailed Semi-AI Assistant.",
+                data: "100% Synthetic Omnichannel Dataset (250,000 customers, 1.8M transactions, 95k CS tickets). Star Schema modeled in BigQuery: `dim_customer_golden_record`, `fact_omnichannel_orders`, `fact_support_interactions`, and `fact_campaign_exposures`.",
+                challenges: "Solved 3 major DQ traps: (1) Duplicate customer identities across phone/email changes using deterministic + fuzzy matching rules, (2) Survivorship bias in CLV calculation, and (3) Preventing LLM hallucinations when executives ask complex cross-table metric questions.",
+                walkthrough: "Built a 58-attribute Customer Health & RFM+C (Recency, Frequency, Monetary, Complaint Penalty) scoring engine in SQL. Integrated a Semi-AI Chatbot where natural language questions trigger parameterized SQL queries to fetch exact cohort metrics before the AI summarizes next-best-action recommendations.",
+                takeaways: "Discovered 14% of High-CLV VIP customers were experiencing repeated app checkout latency and had open CS tickets—yet were still being bombarded with upsell push notifications. By suppressing upsell blasts for open-ticket VIPs and routing them to priority concierge resolution, churn in that segment dropped from 18.4% to 6.2%.",
+                sql: `WITH customer_360 AS (
+  SELECT c.customer_id, c.segment_tier,
+         COUNT(DISTINCT o.order_id) AS freq_90d,
+         SUM(o.net_revenue_idr) AS monetary_90d,
+         COUNTIF(t.ticket_status = 'OPEN' AND t.severity = 'HIGH') AS open_high_tickets
+  FROM \`synth_crm.dim_customer_golden\` c
+  LEFT JOIN \`synth_crm.fact_orders\` o ON c.customer_id = o.customer_id
+  LEFT JOIN \`synth_crm.fact_tickets\` t ON c.customer_id = t.customer_id
+  GROUP BY 1, 2
+)
+SELECT segment_tier, COUNT(*) AS at_risk_vips, SUM(monetary_90d) AS revenue_at_risk_idr
+FROM customer_360
+WHERE segment_tier = 'VIP_PLATINUM' AND open_high_tickets > 0
+GROUP BY 1;`
+            },
+            {
+                id: 2,
+                title: "Omnichannel Promo Cannibalization & Margin Erosion Analytics",
+                category: "Retail, FMCG & E-Commerce",
+                industry: "FMCG & Modern Retail",
+                score: "49/50 Rank #1",
+                effort: "2.5 Weeks • Advanced",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 2: PROMO CANNIBALIZATION]
+                img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+                users: "Trade Marketing Manager, Commercial Finance, Category Management",
+                impact: "Identified 27% of deep-discount promos were margin-negative due to SKU cannibalization; reallocating trade spend improved Net Gross Margin by +4.8%.",
+                stack: ["BigQuery SQL", "Price Elasticity", "Python Statsmodels", "Streamlit", "Semi-AI Simulator"],
+                overview: "Retailers spend billions on price-cut promotions that spike unit volume during campaign weeks but silently destroy net profit. Why? Loyal customers simplystockpile early (forward buying) or switch from regular-priced sister SKUs (cannibalization).",
+                data: "Public Dunnhumby Retail Journey Dataset enriched with synthetic SKU cost structures (COGS), promo mechanics, and competitor price indices across 120 stores.",
+                challenges: "Separating true incremental volume from seasonal baseline spikes, and accounting for the 'Post-Promo Dip' (2 weeks of depressed sales immediately after a big promo ends).",
+                walkthrough: "Used SQL Window Functions to compute 8-week non-promo rolling baselines per SKU-store. Calculated Net Incremental Margin = (Incremental Units × Promo Margin) - (Baseline Units × Subsidized Discount) - (Cannibalized Sister SKU Margin) - (Post-Promo Dip Loss).",
+                takeaways: "Stopped 30% direct price-cuts on 200g flagship coffee packs (which had a 65% cannibalization rate against high-margin 100g packs) and replaced them with multi-category minimum-basket bundling, lifting Average Order Value (AOV) by +18%.",
+                sql: `SELECT sku_id, promo_mechanic,
+       SUM(actual_units - baseline_units) AS gross_lift_units,
+       SUM(net_promo_margin_idr) - SUM(baseline_would_have_earned_idr) - SUM(sister_sku_cannibalized_margin_idr) AS net_incremental_profit_idr
+FROM \`synth_retail.mart_promo_evaluation\`
+GROUP BY 1, 2
+HAVING net_incremental_profit_idr < 0
+ORDER BY net_incremental_profit_idr ASC;`
+            },
+            {
+                id: 3,
+                title: "Payment Gateway Failure, Smart Routing & Settlement Reconciliation",
+                category: "Fintech & Banking",
+                industry: "Fintech & Digital Payments",
+                score: "48.5/50 Rank #2",
+                effort: "2 Weeks • Intermediate-Adv",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 3: PAYMENT GATEWAY RECONCILIATION]
+                img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80",
+                users: "Payment Operations, Treasury Reconciliation, Checkout Product Manager",
+                impact: "Simulated Smart Failover Routing recovered Rp 420M/month in failed checkouts and flagged Rp 85M in MDR fee overcharges & unsettled T+2 transactions.",
+                stack: ["BigQuery SQL", "Multi-Table Reconciliation", "Python", "Streamlit Control Tower", "Semi-AI Audit Bot"],
+                overview: "Digital platforms route payments (QRIS, Virtual Accounts, E-Wallets, Cards) across multiple Payment Gateways (PGs). Peak-hour PG timeouts cause immediate checkout abandonment, while discrepancies between internal order logs and T+2 bank settlement files cause silent cash leakage.",
+                data: "Synthetic Fintech Payment Dataset (500k checkout attempts, 3 PGs, 6 issuer banks, MDR contract rate cards, and bank settlement mutation files).",
+                challenges: "Handling duplicate webhook callbacks (idempotency bugs), timezone cutoff mismatches (23:59 WIB vs UTC settlement windows), and partial refunds.",
+                walkthrough: "Built a 3-way SQL reconciliation engine (`checkout_logs` vs `pg_callbacks` vs `bank_settlement_csv`). Created a Smart Routing simulator comparing PG authorization rates and MDR fees by hour and issuer bank.",
+                takeaways: "Discovered PG-Alpha suffered a 14.2% timeout rate on Bank-X Virtual Accounts during payday evenings (18:00–21:00). Auto-routing Bank-X traffic to PG-Beta whenever 5-minute error rates exceed 5% boosted checkout success from 85.8% to 97.4%.",
+                sql: `SELECT p.pg_provider, p.payment_method,
+       COUNT(*) AS total_success_internal,
+       COUNT(s.settlement_id) AS settled_in_bank,
+       SUM(p.gross_amount_idr - COALESCE(s.gross_settled_idr, 0)) AS unsettled_exposure_idr,
+       SUM(s.actual_mdr_fee_idr - (p.gross_amount_idr * c.contract_mdr_pct)) AS mdr_overcharge_idr
+FROM \`synth_fintech.fact_payments\` p
+LEFT JOIN \`synth_fintech.fact_settlements\` s ON p.trx_id = s.trx_id
+JOIN \`synth_fintech.dim_mdr_contracts\` c ON p.pg_provider = c.pg_provider AND p.payment_method = c.payment_method
+WHERE p.status = 'SUCCESS'
+GROUP BY 1, 2;`
+            },
+            {
+                id: 4,
+                title: "B2B Credit Limit, DSO & Working Capital Risk Optimization",
+                category: "Fintech & Banking",
+                industry: "Commercial Banking & B2B Wholesale",
+                score: "48/50 Rank #3",
+                effort: "2 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 4: B2B CREDIT & DSO]
+                img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+                users: "Credit Control Committee, CFO / Treasury, B2B Sales Director",
+                impact: "Reallocating credit limits from chronic late-payers to credit-constrained Tier-A distributors unlocked +9% net revenue and reduced DSO by 6.5 days.",
+                stack: ["BigQuery SQL", "AR Aging & Roll-Rate", "Python Scoring", "Looker Studio", "Semi-AI Credit Bot"],
+                overview: "In B2B distribution, sales reps often push volume by extending 30-to-60-day credit terms (TOP) to slow-paying outlets, locking up working capital while healthy, fast-growing outlets hit their credit ceiling and experience stockouts.",
+                data: "Public Account Receivable & Invoice Payment History Dataset enriched with synthetic credit limits, order frequency, and gross margin per outlet.",
+                challenges: "Distinguishing temporary seasonal cash tightness from structural delinquency using Cohort Roll-Rate Matrices (Current -> DPD 30 -> DPD 60 -> Bad Debt).",
+                walkthrough: "Calculated Days Sales Outstanding (DSO), Collection Effectiveness Index (CEI), and Credit Utilization Ratio per distributor. Built a deterministic Credit Reallocation Matrix.",
+                takeaways: "Cut credit limits by 40% on 120 'Zombie Accounts' (averaging 45+ days past due with <8% margin) and reallocated Rp 4.2B in credit capacity to 85 high-velocity Tier-A outlets.",
+                sql: `SELECT client_tier,
+       COUNT(DISTINCT client_id) AS clients,
+       ROUND(AVG(days_past_due), 1) AS avg_dpd,
+       SUM(credit_limit_idr) AS locked_credit_limit_idr,
+       SUM(unpaid_ar_over_60d_idr) AS high_risk_ar_idr
+FROM \`synth_b2b.mart_credit_exposure\`
+GROUP BY 1 ORDER BY high_risk_ar_idr DESC;`
+            },
+            {
+                id: 5,
+                title: "Enterprise 58-Attribute Martech Data Quality & Drift Monitoring",
+                category: "Flagship AI & DQ",
+                industry: "Martech & Customer Data Platform (CDP)",
+                score: "49/50 Flagship DQ",
+                effort: "2 Weeks • Advanced",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 5: 58-ATTRIBUTE MARTECH DQ (SYNTHETIC)]
+                img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=900&q=80",
+                users: "Data Governance Lead, Martech Campaign Operations, Data Engineering",
+                impact: "Prevented corrupted customer segmentation blasts by catching schema drift & null spikes across 58 CDP attributes before campaign execution.",
+                stack: ["BigQuery SQL", "Google Apps Script", "Automated DQ Profiling", "HTML/JS Web App", "Alerting"],
+                overview: "Automated marketing platforms rely on dozens of daily customer attributes (lifecycle stage, ARPU band, device type, churn score). When an upstream ETL job silently fails and populates 40% NULLs into a key attribute, thousands of customers receive wrong campaigns. (100% synthetic simulation).",
+                data: "Synthetic 58-Attribute Daily Customer Snapshot Table (14 days of historical partitions simulated in BigQuery with injected null spikes, distribution drift, and stale partition anomalies).",
+                challenges: "Writing dynamic, metadata-driven SQL profiling queries that evaluate 58 columns simultaneously without hardcoding 58 separate scripts.",
+                walkthrough: "Engineered an automated daily profiling table tracking Completeness (Null %), Uniqueness, Cardinality, and Day-over-Day Z-Score Distribution Drift across all 58 attributes.",
+                takeaways: "Reduced campaign data incident detection time (MTTD) from 3 days (after customer complaints) to under 15 minutes via automated morning SLA scorecards.",
+                sql: `SELECT snapshot_date, attribute_name,
+       null_pct, prev_7d_avg_null_pct,
+       ROUND(ABS(null_pct - prev_7d_avg_null_pct) / NULLIF(prev_7d_std_null_pct, 0), 2) AS drift_z_score,
+       CASE WHEN null_pct > sla_threshold_pct THEN 'FAIL_SLA' ELSE 'PASS' END AS dq_status
+FROM \`synth_cdp.dq_58_attribute_daily_audit\`
+WHERE snapshot_date = CURRENT_DATE();`
+            },
+            {
+                id: 6,
+                title: "Cross-Platform Cloud DWH Migration & Storage Reconciliation",
+                category: "Flagship AI & DQ",
+                industry: "Cloud Data Engineering & Governance",
+                score: "48.5/50 Flagship DQ",
+                effort: "2 Weeks • Advanced",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 6: CLOUD DWH RECONCILIATION (SYNTHETIC)]
+                img: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=900&q=80",
+                users: "Data Platform Architect, BI Engineering Lead, Enterprise QA",
+                impact: "Automated 100% parity verification across Legacy vs. Modern Cloud DWH layers, cutting table migration sign-off time by 65%.",
+                stack: ["BigQuery SQL", "Impala SQL", "Python Automation", "Data Reconciliation", "Scorecarding"],
+                overview: "During large-scale data warehouse migrations (e.g., Legacy Hadoop/Impala to Modern Cloud BigQuery), subtle ETL bugs cause row drops, rounding discrepancies, and duplicate primary keys between staging and production tables. (100% synthetic data).",
+                data: "Synthetic Multi-Layer DWH Dataset simulating 25 core production tables across Legacy Layer_1 and Modern Cloud Layer_2.",
+                challenges: "Comparing millions of rows efficiently without full-table row-by-row joins that blow up cloud compute costs.",
+                walkthrough: "Built a standardized 5-Point SQL Reconciliation Framework: (1) Partition Row Count Parity, (2) Primary Key Uniqueness, (3) Numeric Metric Checksum Parity, (4) Null Ratio Comparison, and (5) Hash-Diff Exception Isolation.",
+                takeaways: "Isolated a timezone truncation bug in staging transformations that caused a 1.8% daily volume mismatch on midnight transactions, enabling zero-defect production cutover.",
+                sql: `WITH layer1 AS (
+  SELECT trx_date, COUNT(*) AS cnt1, SUM(net_amount) AS sum1 FROM \`synth_legacy.fact_sales\` GROUP BY 1
+),
+layer2 AS (
+  SELECT trx_date, COUNT(*) AS cnt2, SUM(net_amount) AS sum2 FROM \`synth_modern.fact_sales\` GROUP BY 1
+)
+SELECT COALESCE(a.trx_date, b.trx_date) AS trx_date,
+       (a.cnt1 - b.cnt2) AS row_diff, (a.sum1 - b.sum2) AS amount_diff
+FROM layer1 a FULL OUTER JOIN layer2 b ON a.trx_date = b.trx_date
+WHERE a.cnt1 <> b.cnt2 OR ABS(a.sum1 - b.sum2) > 0.01;`
+            },
+            {
+                id: 7,
+                title: "Telecom Revenue Assurance & CDR-to-Billing Control Tower",
+                category: "Flagship AI & DQ",
+                industry: "Telecommunications",
+                score: "49/50 Flagship",
+                effort: "2 Weeks • Advanced",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 7: TELECOM REVENUE ASSURANCE (SYNTHETIC)]
+                img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80",
+                users: "Revenue Assurance Manager, Billing Operations, Finance Controller",
+                impact: "Detected 2.2% unbilled network usage (CDR) and tariff mismatches on synthetic telecom traffic, modeling Rp 1.4B/year in revenue recovery.",
+                stack: ["BigQuery SQL", "Streamlit Control Tower", "Python", "Looker Studio", "Rule Engine"],
+                overview: "Telecom operators process millions of daily network usage events (CDRs). If mediation pipelines drop records or billing catalogs apply outdated prices, customers consume data without being billed (Revenue Leakage). Uses 100% synthetic generator.",
+                data: "Synthetic 5,000-row Telecom CDR vs. Billing vs. DWH Dataset generated via Python (`streamlit_control_tower.py`).",
+                challenges: "Reconciling high-volume usage logs against billing ledgers while separating true unbilled leakage from legitimate free-quota bonus redemptions.",
+                walkthrough: "Built a 3-Tier Control Tower: (1) Automated SQL rule engine for Completeness, Uniqueness, and Tariff Parity, (2) Interactive Streamlit Anomaly Explorer, and (3) Regional Leakage Matrix.",
+                takeaways: "Flagged an unbilled VAS subscription sync bug and duplicate transaction IDs early, raising simulated Data Reliability SLA compliance to 99.4%.",
+                sql: `SELECT product_name, reconciliation_status,
+       COUNT(*) AS affected_transactions,
+       SUM(cdr_network_idr - billing_charged_idr) AS revenue_leakage_idr
+FROM \`synth_telco.vw_cdr_billing_reconciliation\`
+WHERE reconciliation_status LIKE 'LEAKAGE%'
+GROUP BY 1, 2 ORDER BY revenue_leakage_idr DESC;`
+            },
+            {
+                id: 8,
+                title: "Marketplace Seller SLA Breach, Refund Attribution & Penalty Policy",
+                category: "Retail, FMCG & E-Commerce",
+                industry: "E-Commerce Marketplace",
+                score: "47/50 Rank #4",
+                effort: "2 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 8: MARKETPLACE SLA & REFUND]
+                img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
+                users: "Marketplace Operations, Seller Governance, Customer Experience (CX)",
+                impact: "Separated seller packing delays from 3PL courier bottlenecks; new tiered SLA cutoff policy reduced order cancellations by 31%.",
+                stack: ["BigQuery SQL", "Olist Public Dataset", "Cohort Retention", "Python", "Streamlit"],
+                overview: "Late deliveries and defective orders trigger costly refunds and cause 60% of first-time buyers to never return. Operations teams often blame couriers when the real bottleneck is seller handover delay.",
+                data: "Public Olist E-Commerce Dataset (100,000+ orders with granular timestamps: purchase, approval, seller carrier handover, delivery, and review score).",
+                challenges: "Deconstructing total delivery lead time into distinct operational milestones and handling missing courier scan timestamps.",
+                walkthrough: "Modeled an SLA Milestone Fact Table measuring `seller_prep_hours` vs `carrier_transit_hours`. Ran Pareto concentration analysis and 60-day post-defect buyer survival analysis.",
+                takeaways: "Proved 72% of late orders in Home & Living were caused by 45 large sellers handing parcels to couriers in the final hour of the SLA window. Enforcing next-day handover cut late shipments by 31%.",
+                sql: `SELECT seller_id,
+       COUNT(order_id) AS total_orders,
+       AVG(TIMESTAMP_DIFF(carrier_handover_ts, order_approved_ts, HOUR)) AS avg_seller_prep_hrs,
+       COUNTIF(actual_delivery_ts > estimated_delivery_ts) / COUNT(*) AS late_delivery_rate
+FROM \`public_olist.fact_order_milestones\`
+GROUP BY 1 HAVING total_orders >= 100 ORDER BY late_delivery_rate DESC;`
+            },
+            {
+                id: 9,
+                title: "Telecom Churn Early-Warning: Network vs. Commercial Root-Cause",
+                category: "Flagship AI & DQ",
+                industry: "Telecommunications (CVM)",
+                score: "46.5/50 Rank #5",
+                effort: "2 Weeks • Intermediate-Adv",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 9: TELECOM CHURN UPLIFT]
+                img: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=900&q=80",
+                users: "CVM Retention Lead, Network Quality Engineering, Marketing Analytics",
+                impact: "Stopped wasting discount subsidies on network-driven churners, saving Rp 650M/quarter in retention promo budget while lifting net saved ARPU.",
+                stack: ["BigQuery SQL", "Python", "Uplift Segmentation", "Streamlit", "Semi-AI CVM Bot"],
+                overview: "Retention teams often blast 30% discount offers to all high-risk churners. However, customers churning due to poor local BTS signal quality will leave anyway, wasting promo subsidies.",
+                data: "Public Telecom Churn Dataset enriched with synthetic weekly data usage decay logs and local BTS network congestion/downtime metrics.",
+                challenges: "Distinguishing 'Commercial Churn' (price/competitor sensitivity) from 'Technical Churn' (network degradation) and 'Sure Things' (loyal users who just want free discounts).",
+                walkthrough: "Cross-joined subscriber usage drop (>40% WoW) with cell-tower trouble tickets. Created a 2x2 Retention Action Matrix and a Semi-AI CVM target list generator.",
+                takeaways: "Found 28% of high-risk churners were located in degraded BTS sectors. Suppressing price discounts for that group (routing them instead to network fix alerts + free quota apology upon repair) saved Rp 650M/quarter.",
+                sql: `SELECT subscriber_segment, bts_health_status,
+       COUNT(subscriber_id) AS high_risk_subs,
+       SUM(monthly_arpu_idr) AS arpu_at_risk_idr,
+       CASE WHEN bts_health_status = 'CONGESTED' THEN 'ESCALATE_NETWORK_NO_DISCOUNT'
+            ELSE 'SEND_RETENTION_OFFER' END AS recommended_action
+FROM \`synth_telco.mart_churn_root_cause\`
+WHERE churn_risk_score >= 0.75 GROUP BY 1, 2, 5;`
+            },
+            {
+                id: 10,
+                title: "Cold-Chain Spoilage, Dock Dwell-Time & OTIF Penalty Optimization",
+                category: "Logistics & Manufacturing",
+                industry: "Logistics & Cold-Chain Supply Chain",
+                score: "46/50 Rank #6",
+                effort: "2 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 10: COLD CHAIN & OTIF]
+                img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80",
+                users: "Supply Chain Director, Fleet Dispatch Operations, Warehouse Manager",
+                impact: "Identified morning loading-dock bottlenecks causing 68% of late deliveries; shifting wave-picking schedules lifted OTIF from 84% to 95.5%.",
+                stack: ["BigQuery SQL", "Python", "IoT Temp Audit", "Streamlit", "Variance Analysis"],
+                overview: "Modern retail chains fine distributors 3%–5% of invoice value for deliveries that fail On-Time In-Full (OTIF) SLAs, while temperature excursions ruin frozen goods.",
+                data: "Public DataCo Supply Chain Dataset enriched with synthetic warehouse dock timestamps and reefer truck temperature telemetry.",
+                challenges: "Reconciling GPS transit durations against warehouse gate-in/gate-out logs to find where time is actually lost.",
+                walkthrough: "Decomposed total order-to-delivery hours into Warehouse Picking, Dock Waiting, Linehaul Transit, and Store Unloading. Audited temperature breaches (> -12°C for >45 mins).",
+                takeaways: "Shifted long-haul Java route loading from 06:00–08:00 AM peak congestion to 22:00–01:00 night waves, slashing OTIF penalty charges by Rp 280M/month.",
+                sql: `SELECT route_lane, departure_shift,
+       AVG(dock_dwell_minutes) AS avg_dock_wait_mins,
+       AVG(transit_delay_minutes) AS avg_road_delay_mins,
+       COUNTIF(is_otif = TRUE) / COUNT(*) AS otif_rate_pct,
+       SUM(otif_penalty_idr + spoilage_loss_idr) AS total_loss_idr
+FROM \`synth_logistics.fact_cold_chain_shipments\`
+GROUP BY 1, 2 ORDER BY total_loss_idr DESC;`
+            },
+            {
+                id: 11,
+                title: "Hospital Insurance Claim Denial & Revenue Cycle Management (RCM)",
+                category: "Healthcare, Energy & SaaS",
+                industry: "Healthcare & Hospital Finance",
+                score: "45.5/50 Rank #7",
+                effort: "2 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 11: HOSPITAL CLAIM DENIAL]
+                img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80",
+                users: "Revenue Cycle Manager (RCM), Casemix Medical Coding Team, Hospital CFO",
+                impact: "Built a Pre-Submission Data Quality Gate for ICD-10/ICD-9 coding mismatches, cutting pending/denied insurance claims from 12.4% to 4.1%.",
+                stack: ["BigQuery SQL", "DQ Rule Engine", "Python", "Streamlit", "Healthcare RCM"],
+                overview: "Hospitals suffer severe cashflow delays when 8%–15% of insurance/BPJS claims are returned or denied due to incomplete clinical attachments or mismatched diagnosis (ICD-10) and procedure (ICD-9) codes.",
+                data: "Public CMS/Healthcare Claims Dataset adapted with synthetic denial reason codes, payer SLAs, and department billing records.",
+                challenges: "Standardizing free-text payer rejection notes into structured root-cause categories.",
+                walkthrough: "Analyzed First-Pass Claim Acceptance Rate by department, payer, and coding clerk. Built 18 pre-submission SQL validation rules that flag incomplete claims before submission.",
+                takeaways: "Discovered 55% of Orthopedic pending claims stemmed from 3 physiotherapy procedure codes missing mandatory radiology attachments. Enforcing a hard system validation rule accelerated Rp 3.1B in cash collection.",
+                sql: `SELECT specialty_dept, denial_root_cause,
+       COUNT(claim_id) AS denied_claims,
+       SUM(billed_claim_idr) AS stuck_revenue_idr,
+       AVG(days_to_resubmit) AS avg_delay_days
+FROM \`synth_health.fact_insurance_claims\`
+WHERE claim_status IN ('DENIED', 'PENDING_DOC')
+GROUP BY 1, 2 ORDER BY stuck_revenue_idr DESC;`
+            },
+            {
+                id: 12,
+                title: "Manufacturing OEE Downtime Loss, Changeover & Scrap Cost Analytics",
+                category: "Logistics & Manufacturing",
+                industry: "FMCG & Industrial Manufacturing",
+                score: "45/50 Rank #8",
+                effort: "2 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 12: MANUFACTURING OEE & SCRAP]
+                img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+                users: "Plant Manager, PPIC (Production Planning), Continuous Improvement (Lean)",
+                impact: "Resequencing production batches from Light-to-Dark SKU colors reduced changeover cleaning time by 32% and saved Rp 190M/month in startup scrap.",
+                stack: ["BigQuery SQL", "OEE Six Big Losses", "Python", "Streamlit", "Pareto Analysis"],
+                overview: "Factories often miss output targets despite running 24/7 because hidden micro-stops, long SKU changeover setups, and startup material defects erode Overall Equipment Effectiveness (OEE).",
+                data: "Public Manufacturing Production Telemetry Dataset enriched with SKU batch sequencing, shift logs, and raw material scrap cost.",
+                challenges: "Reconciling automated PLC machine counter logs with manual operator downtime reason entries.",
+                walkthrough: "Deconstructed OEE into Availability × Performance × Quality. Analyzed changeover duration and startup scrap rate across all SKU-to-SKU transition pairs.",
+                takeaways: "Transitioning from Dark-colored to Light-colored product batches required 95 minutes of line flushing and 3x higher scrap. Implementing a strict Light-to-Dark weekly PPIC schedule lifted line OEE from 68% to 76%.",
+                sql: `SELECT prev_sku_color_group, next_sku_color_group,
+       COUNT(batch_id) AS transitions,
+       AVG(changeover_minutes) AS avg_setup_mins,
+       AVG(startup_scrap_kg * cost_per_kg_idr) AS avg_scrap_cost_idr
+FROM \`synth_mfg.fact_batch_changeovers\`
+GROUP BY 1, 2 ORDER BY avg_scrap_cost_idr DESC;`
+            },
+            {
+                id: 13,
+                title: "BNPL (Paylater) First-Payment Default (FPD30) & Limit Strategy",
+                category: "Fintech & Banking",
+                industry: "Fintech Lending & BNPL",
+                score: "44.5/50 Rank #9",
+                effort: "2.5 Weeks • Advanced",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 13: BNPL FPD30 & CREDIT RISK]
+                img: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=900&q=80",
+                users: "Chief Risk Officer (CRO), Credit Underwriting, Fraud Risk Analytics",
+                impact: "Capping initial BNPL limit utilization on high-risk midnight digital voucher purchases cut First-Payment Default (FPD30) from 4.8% to 2.9%.",
+                stack: ["BigQuery SQL", "Vintage & Roll-Rate", "Python", "Streamlit", "Risk Analytics"],
+                overview: "Rapid Paylater user growth can mask toxic credit cohorts. When First-Payment Default (FPD30) spikes above 4%, interest income from good borrowers is wiped out by principal write-offs.",
+                data: "Public Lending/Credit Default Dataset combined with synthetic first-transaction merchant category, hour-of-day, and limit utilization logs.",
+                challenges: "Building accurate Vintage Delinquency Curves that account for different loan tenors (1, 3, 6, 12 months) and maturation windows.",
+                walkthrough: "Constructed SQL Vintage and Roll-Rate matrices segmented by acquisition channel, credit score band, and first-purchase behavior.",
+                takeaways: "New users who spent >85% of their initial credit limit on digital game vouchers between 00:00–04:00 AM exhibited a 24% FPD30 rate (likely cash-out fraud). Capping digital category utilization at 30% for accounts <30 days old protected Rp 1.8B in principal.",
+                sql: `SELECT acquisition_cohort_month, first_trx_category,
+       COUNT(DISTINCT loan_id) AS total_loans,
+       COUNTIF(dpd_at_installment_1 >= 30) / COUNT(DISTINCT loan_id) AS fpd30_rate,
+       SUM(CASE WHEN dpd_at_installment_1 >= 30 THEN principal_idr ELSE 0 END) AS fpd30_loss_idr
+FROM \`synth_bnpl.mart_vintage_delinquency\`
+GROUP BY 1, 2 ORDER BY fpd30_rate DESC;`
+            },
+            {
+                id: 14,
+                title: "Health & Motor Insurance Claim Leakage & Provider Anomaly Triage",
+                category: "Fintech & Banking",
+                industry: "Insurance (Insurtech & Underwriting)",
+                score: "44/50 Rank #10",
+                effort: "2 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 14: INSURANCE CLAIM FRAUD TRIAGE]
+                img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80",
+                users: "Special Investigation Unit (SIU), Claim Audit Manager, Actuarial Pricing",
+                impact: "Peer-group Z-score benchmarking across partner clinics & workshops flagged Rp 1.2B/year in upcoding, split-billing, and over-prescription.",
+                stack: ["BigQuery SQL", "Outlier Z-Score", "Python", "Streamlit", "Semi-AI Audit Bot"],
+                overview: "Insurers lose 3%–7% of claim payouts to 'soft fraud' and leakage: partner clinics prescribing excessive branded drugs for minor ailments or workshops splitting one accident into two separate claims.",
+                data: "Public Insurance Claim Dataset enriched with provider peer groups, ICD-10 diagnosis codes, and itemized bill line items.",
+                challenges: "Normalizing claim severity so specialized tertiary hospitals aren't falsely flagged when compared against small primary clinics.",
+                walkthrough: "Computed Provider Cost Index (PCI) using peer-normalized Z-scores per diagnosis code, plus SQL window checks for same-policyholder split claims within 72 hours.",
+                takeaways: "Identified 8 partner clinics prescribing an average of 4.8 branded drugs per mild URI visit (vs. 2.1 national benchmark). Switching those diagnoses to bundled package reimbursement saved Rp 1.2B/year.",
+                sql: `WITH diag_bench AS (
+  SELECT icd10_code, provider_tier, AVG(claim_amount_idr) AS peer_avg, STDDEV(claim_amount_idr) AS peer_std
+  FROM \`synth_insure.fact_claims\` GROUP BY 1, 2
+)
+SELECT c.provider_id, c.icd10_code, COUNT(*) AS claim_cnt,
+       AVG((c.claim_amount_idr - b.peer_avg) / NULLIF(b.peer_std, 0)) AS avg_cost_z_score
+FROM \`synth_insure.fact_claims\` c
+JOIN diag_bench b ON c.icd10_code = b.icd10_code AND c.provider_tier = b.provider_tier
+GROUP BY 1, 2 HAVING claim_cnt >= 30 AND avg_cost_z_score > 2.5;`
+            },
+            {
+                id: 15,
+                title: "Non-Technical Loss (Electricity/Water Theft) & Smart Meter Audit",
+                category: "Healthcare, Energy & SaaS",
+                industry: "Energy & Utilities",
+                score: "43.5/50 Rank #11",
+                effort: "2 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 15: SMART METER UTILITY AUDIT]
+                img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80",
+                users: "Revenue Protection (P2TL), Meter Data Management, Field Inspection Ops",
+                impact: "Lifted field inspection hit-rate from <5% (random checks) to 41% (data-targeted), recovering Rp 850M in unbilled commercial utility consumption.",
+                stack: ["BigQuery SQL", "Time-Series Anomaly", "Python", "Streamlit", "Geospatial Cluster"],
+                overview: "Utility providers lose massive revenue to meter tampering, illegal bypasses, and faulty smart meters (Non-Technical Loss), while sending field inspectors randomly has a dismal <5% hit rate.",
+                data: "Public Smart Meter Half-Hourly Consumption Dataset (UCI/London) injected with synthetic step-change drops and transformer-level energy balance gaps.",
+                challenges: "Separating legitimate business closures/vacations from meter tampering using neighborhood peer baselines.",
+                walkthrough: "Compared individual commercial meter profiles against their local distribution transformer aggregate and peer business category averages.",
+                takeaways: "Flagged 340 commercial shophouses whose daytime kWh dropped >70% permanently while adjacent shops on the same feeder remained stable, achieving a 41% field audit confirmation rate.",
+                sql: `SELECT meter_id, tariff_class, feeder_id,
+       avg_kwh_prev_90d, avg_kwh_last_30d,
+       ROUND((avg_kwh_last_30d - avg_kwh_prev_90d) / NULLIF(avg_kwh_prev_90d, 0) * 100, 1) AS consumption_drop_pct,
+       feeder_peer_change_pct
+FROM \`synth_utility.mart_meter_anomaly\`
+WHERE consumption_drop_pct < -60 AND feeder_peer_change_pct > -5;`
+            },
+            {
+                id: 16,
+                title: "Store Assortment Rationalization & Inter-Store Stock Transfer Optimizer",
+                category: "Retail, FMCG & E-Commerce",
+                industry: "Fashion & Specialty Retail",
+                score: "43/50 Rank #12",
+                effort: "2 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 16: RETAIL ASSORTMENT & DEAD STOCK]
+                img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
+                users: "Merchandising Planner, Inventory Allocation, Retail Operations",
+                impact: "Replaced knee-jerk 50% clearance markdowns with targeted inter-store stock transfers, preserving Rp 145M in gross margin.",
+                stack: ["BigQuery SQL", "ABC-XYZ Matrix", "GMROI", "Python", "Streamlit"],
+                overview: "Multi-store retailers often suffer from slow-moving 'dead stock' in climate/demographically mismatched branches while high-demand branches stock out of the exact same SKU.",
+                data: "Public Fashion/Retail Inventory Dataset with weekly store-level stock-on-hand, sell-through velocity, and logistics transfer cost.",
+                challenges: "Calculating whether transferring stock between cities yields higher net margin than discounting it locally after accounting for freight cost.",
+                walkthrough: "Built an ABC-XYZ inventory classification and an automated Inter-Store Transfer Matcher comparing `net_margin_if_transferred` vs `net_margin_if_marked_down_50pct`.",
+                takeaways: "Reallocated 1,200 outerwear units from slow-moving coastal branches to high-velocity highland branches (Bandung/Malang), selling them at full price and saving Rp 145M in margin.",
+                sql: `SELECT sku_id, origin_store, target_store, excess_units,
+       (excess_units * full_margin_idr) - (excess_units * transfer_cost_per_unit_idr) AS net_transfer_value_idr,
+       (excess_units * clearance_50pct_margin_idr) AS local_markdown_value_idr
+FROM \`synth_fashion.mart_stock_rebalancing\`
+WHERE ((excess_units * full_margin_idr) - (excess_units * transfer_cost_per_unit_idr)) > (excess_units * clearance_50pct_margin_idr);`
+            },
+            {
+                id: 17,
+                title: "B2B SaaS Feature Adoption Funnel, Seat Utilization & Renewal Risk",
+                category: "Healthcare, Energy & SaaS",
+                industry: "B2B SaaS & Enterprise Tech",
+                score: "42.5/50 Rank #13",
+                effort: "1.5 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 17: B2B SAAS NRR & SEAT UTILIZATION]
+                img: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80",
+                users: "Customer Success Manager (CSM), Product Manager, Revenue Operations",
+                impact: "Early intervention on accounts with <40% seat utilization 90 days before renewal protected $320K in Annual Recurring Revenue (ARR).",
+                stack: ["BigQuery SQL", "Product Telemetry", "Cohort Retention", "Streamlit", "Semi-AI CSM Brief"],
+                overview: "B2B SaaS clients sign annual contracts, but silently stop using core features months before renewal—leading to surprise seat downgrades or churn.",
+                data: "Public RavenStack / B2B SaaS Subscription & Feature Telemetry Dataset.",
+                challenges: "Aggregating noisy daily clickstream events into meaningful account-level health scores without skewing toward large-seat enterprises.",
+                walkthrough: "Identified the 'Aha! Habit Loop' (using automated workflow exports >=3x/month within the first 30 days). Built a 90-Day Pre-Renewal Risk Radar.",
+                takeaways: "Triggered automated CSM onboarding workshops for 35 red-zone corporate accounts at D-90 before contract expiry, lifting Net Revenue Retention (NRR) from 94% to 106%.",
+                sql: `SELECT account_id, contract_arr_usd, days_to_renewal,
+       active_seats_30d / NULLIF(licensed_seats, 0) AS seat_utilization_ratio,
+       core_workflow_events_30d
+FROM \`synth_saas.mart_account_health\`
+WHERE days_to_renewal BETWEEN 30 AND 90 AND (active_seats_30d / NULLIF(licensed_seats, 0)) < 0.40;`
+            },
+            {
+                id: 18,
+                title: "Fleet Fuel Pilferage, Idle-Time Variance & Route Cost Control",
+                category: "Logistics & Manufacturing",
+                industry: "Logistics & Mining Fleet Operations",
+                score: "42/50 Rank #14",
+                effort: "1.5 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 18: FLEET FUEL PILFERAGE AUDIT]
+                img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80",
+                users: "Fleet Operations Manager, Internal Cost Audit, HSE",
+                impact: "Reconciling fuel card receipts against GPS distance & payload tonnage exposed 14 anomalous trucks, cutting fleet diesel spend by 8.4% (Rp 310M/mo).",
+                stack: ["BigQuery SQL", "Regression Baseline", "Python", "Streamlit", "Cost Audit"],
+                overview: "Fuel accounts for ~40% of fleet operating costs. Siphoning (fuel theft), inflated gas station receipts, and excessive engine idling silently drain profitability.",
+                data: "Synthetic Fleet Telemetry & Fuel Transaction Dataset (200 trucks, GPS mileage, payload tonnage, terrain grade, and fuel station receipts).",
+                challenges: "Accounting for legitimate fuel burn differences caused by heavy payloads and uphill mining/intercity routes.",
+                walkthrough: "Built a regression baseline predicting `expected_liters_per_100km` based on vehicle class, payload weight, and route elevation, flagging >2.5 SD positive residuals.",
+                takeaways: "Isolated 14 trucks consuming 22% excess fuel exclusively when refueling at 2 specific third-party stations. Switching to closed-loop RFID fuel dispensers saved Rp 310M/month.",
+                sql: `SELECT truck_id, driver_id, fuel_station_id,
+       COUNT(trip_id) AS trips,
+       SUM(actual_liters_billed - expected_model_liters) AS excess_liters,
+       SUM((actual_liters_billed - expected_model_liters) * diesel_price_idr) AS suspected_leakage_idr
+FROM \`synth_fleet.fact_fuel_audit\`
+GROUP BY 1, 2, 3 HAVING excess_liters > 250 ORDER BY suspected_leakage_idr DESC;`
+            },
+            {
+                id: 19,
+                title: "Pharmacy Batch Expiry Write-Off, FEFO Compliance & Dynamic Safety Stock",
+                category: "Healthcare, Energy & SaaS",
+                industry: "Healthcare Retail & Pharmacy Chain",
+                score: "41.5/50 Rank #15",
+                effort: "1.5 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 19: PHARMACY EXPIRY & FEFO]
+                img: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=80",
+                users: "Pharmacy Procurement, Inventory Control, Store Audit",
+                impact: "Detected FEFO (First-Expired, First-Out) violations and automated 120-day pre-expiry branch transfers, cutting drug write-offs by 62%.",
+                stack: ["BigQuery SQL", "Inventory FEFO Audit", "Python", "Streamlit", "Replenishment"],
+                overview: "Pharmacy chains lose 100% of COGS on expired medications while simultaneously suffering stockouts on chronic prescription drugs. Staff often accidentally sell newer batches while older batches sit on shelves and expire.",
+                data: "Synthetic Pharmacy POS & Batch Inventory Dataset with `batch_lot_id`, `expiry_date`, and daily store dispensing logs.",
+                challenges: "Tracking inventory at the granular `SKU + Store + Batch_Lot` grain rather than simple store-level totals.",
+                walkthrough: "Used SQL Window Functions to detect FEFO violations (dispensing a batch with a later expiry date when an older batch was physically in stock) and projected `days_of_supply_remaining` vs `days_until_expiry`.",
+                takeaways: "Flagged 420 SKU lots with <120 days to expiry whose local branch velocity was too slow to clear stock, transferring them to high-volume hospital-adjacent branches.",
+                sql: `SELECT store_id, sku_id, batch_lot_id, expiry_date,
+       current_stock_qty,
+       ROUND(current_stock_qty / NULLIF(avg_daily_sales_30d, 0), 0) AS projected_days_to_sell,
+       DATE_DIFF(expiry_date, CURRENT_DATE(), DAY) AS days_until_expiry
+FROM \`synth_pharma.mart_batch_expiry_risk\`
+WHERE DATE_DIFF(expiry_date, CURRENT_DATE(), DAY) < 120
+  AND (current_stock_qty / NULLIF(avg_daily_sales_30d, 0)) > DATE_DIFF(expiry_date, CURRENT_DATE(), DAY);`
+            },
+            {
+                id: 20,
+                title: "Semi-AI Natural Language to Verified SQL (NL2SQL) Business Co-Pilot",
+                category: "Flagship AI & DQ",
+                industry: "Enterprise BI & AI Engineering",
+                score: "49.5/50 Flagship AI",
+                effort: "2.5 Weeks • Advanced",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 20: SEMI-AI NL2SQL COPILOT]
+                img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
+                users: "C-Level Executives, Commercial Heads, Self-Service BI Users",
+                impact: "Eliminated AI number hallucinations by combining a Semantic Metric Layer + Deterministic SQL Templates + LLM Narrative Synthesis.",
+                stack: ["Python", "BigQuery SQL", "Semantic Layer", "Streamlit Chat UI", "Guardrailed LLM"],
+                overview: "Executives want to ask questions in plain Indonesian/English ('Why did margin drop in West Java last week?') and get instant answers. However, letting raw LLMs write arbitrary SQL against messy tables produces wrong numbers and security risks.",
+                data: "Unified Enterprise Semantic Mart (Sales, Margin, SLA, and Data Quality tables) with a governed JSON Metric Dictionary.",
+                challenges: "Enforcing strict metric definitions (e.g., ensuring 'Net Revenue' always deducts returns and tax) and preventing SQL injection or runaway query costs.",
+                walkthrough: "Architected a 4-stage Semi-AI pipeline: (1) Intent & Entity Extractor maps user prompt to governed metric templates, (2) Deterministic SQL Engine executes verified BigQuery code, (3) DQ Check verifies data freshness, and (4) AI Narrator summarizes the exact dataframe into executive bullet points.",
+                takeaways: "Achieved 100% mathematical accuracy on 50+ core business questions while cutting ad-hoc analyst reporting turnaround from 2 days to 8 seconds.",
+                sql: `-- Governed Semantic Template Triggered by Semi-AI Router
+-- Intent: REGION_MARGIN_VARIANCE_BRIDGE
+SELECT region_name,
+       SUM(prev_month_margin_idr) AS baseline_margin_idr,
+       SUM(curr_month_margin_idr) AS actual_margin_idr,
+       SUM(volume_effect_idr) AS variance_from_volume,
+       SUM(price_promo_effect_idr) AS variance_from_promo,
+       SUM(mix_effect_idr) AS variance_from_sku_mix
+FROM \`synth_bi.semantic_margin_bridge\`
+WHERE region_name = @extracted_region_param GROUP BY 1;`
+            },
+            {
+                id: 21,
+                title: "Digital Marketing Attribution, CAC Payback & Fake-Lead Bot Filtering",
+                category: "Retail, FMCG & E-Commerce",
+                industry: "Growth Marketing & Performance Ads",
+                score: "44/50 Bonus Case",
+                effort: "1.5 Weeks • Intermediate",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 21: MARKETING ATTRIBUTION & CAC]
+                img: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=900&q=80",
+                users: "Performance Marketing Lead, CMO, Growth Analyst",
+                impact: "Filtered out 19% invalid/bot ad clicks and shifted budget from Last-Click vanity campaigns to high-LTV cohorts, improving 90-day ROAS by +34%.",
+                stack: ["BigQuery SQL", "Multi-Touch Attribution", "Python", "Looker Studio", "DQ Bot Filter"],
+                overview: "Ad platforms (Meta, Google, TikTok) each claim credit for the same conversion (Last-Click bias), while click-farms and duplicate lead forms inflate top-of-funnel volume without generating real paying customers.",
+                data: "Synthetic Multi-Channel Ad Spend, Clickstream Touchpoints, and 90-Day Cohort LTV Dataset.",
+                challenges: "Deduplicating cross-device touchpoints and filtering out automated bot signups before calculating Customer Acquisition Cost (CAC).",
+                walkthrough: "Built a DQ Lead Validation filter (flagging suspicious IP velocity and disposable emails), compared Last-Click vs. Time-Decay Attribution, and evaluated channels on `90_Day_Net_Margin_LTV / CAC`.",
+                takeaways: "Discovered Affiliate Network-Z generated 30% of cheap leads but had an 88% bot/dormant rate and a 14-month CAC payback. Reallocating that budget to high-intent Search & Retargeting lifted net 90-day ROAS by 34%.",
+                sql: `SELECT acquisition_channel,
+       COUNT(DISTINCT lead_id) AS raw_leads,
+       COUNTIF(is_verified_human = TRUE) AS valid_leads,
+       SUM(ad_spend_idr) / NULLIF(COUNTIF(converted_paid = TRUE), 0) AS true_cac_idr,
+       AVG(ltv_90d_margin_idr) / NULLIF((SUM(ad_spend_idr) / NULLIF(COUNTIF(converted_paid = TRUE), 0)), 0) AS ltv_to_cac_ratio
+FROM \`synth_growth.mart_channel_payback\`
+GROUP BY 1 ORDER BY ltv_to_cac_ratio DESC;`
+            },
+            {
+                id: 22,
+                title: "Real-Time Schema Drift, SLA Late-Arrival & Pipeline Observability Tower",
+                category: "Flagship AI & DQ",
+                industry: "Data Platform & Analytics Engineering",
+                score: "48/50 Flagship DQ",
+                effort: "1.5 Weeks • Advanced",
+                // [UPLOAD GAMBAR DI SINI - PROJECT 22: PIPELINE OBSERVABILITY & SLA]
+                img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80",
+                users: "Head of Data Engineering, BI Analytics Lead, Data Stewards",
+                impact: "Automated dependency lineage & freshness SLA tracking across 80+ tables, preventing executives from making decisions on stale morning dashboards.",
+                stack: ["BigQuery INFORMATION_SCHEMA", "SQL Metadata Audit", "Python", "Streamlit", "Automated Alerts"],
+                overview: "When an upstream ingestion job runs 2 hours late or drops a partition, downstream BI dashboards silently display partial numbers—causing executives to panic over fake 'revenue drops'.",
+                data: "Synthetic BigQuery `INFORMATION_SCHEMA` & Job Execution Metadata logs across 85 Bronze, Silver, and Gold tables.",
+                challenges: "Detecting 'silent partial loads' (where a job succeeds technically with 0 errors, but loads only 30% of expected daily row volume).",
+                walkthrough: "Used SQL statistical bounds on historical partition row counts (Day-of-Week adjusted) and mapped upstream-to-downstream table lineage so any failed Silver table automatically puts a warning banner on affected Gold dashboards.",
+                takeaways: "Eliminated false-alarm executive escalations by catching 100% of late or partial table loads before 07:30 AM daily.",
+                sql: `SELECT table_name, partition_date,
+       row_count, expected_dow_avg_rows,
+       ROUND((row_count - expected_dow_avg_rows) / NULLIF(expected_dow_std_rows, 0), 2) AS volume_z_score,
+       TIMESTAMP_DIFF(load_completed_ts, sla_deadline_ts, MINUTE) AS sla_delay_minutes
+FROM \`synth_meta.pipeline_observability_log\`
+WHERE partition_date = CURRENT_DATE()
+  AND (ABS((row_count - expected_dow_avg_rows) / NULLIF(expected_dow_std_rows, 0)) > 3.0 OR load_completed_ts > sla_deadline_ts);`
+            }
+        ];
+
+        let activeCategory = 'ALL';
+
+        function setCategory(cat) {
+            activeCategory = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                if (btn.getAttribute('data-cat') === cat) {
+                    btn.className = "cat-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-sky-500 text-slate-950 transition shadow-sm";
+                } else {
+                    btn.className = "cat-btn px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-white dark:bg-darkCard border border-slate-300 dark:border-slate-700 hover:border-sky-400 transition";
+                }
+            });
+            renderProjects();
+        }
+
+        function renderProjects() {
+            const query = (document.getElementById('searchInput').value || '').toLowerCase();
+            const grid = document.getElementById('projectsGrid');
+            const filtered = PROJECTS.filter(p => {
+                const matchCat = activeCategory === 'ALL' || p.category === activeCategory;
+                const matchSearch = p.title.toLowerCase().includes(query) ||
+                                    p.industry.toLowerCase().includes(query) ||
+                                    p.impact.toLowerCase().includes(query) ||
+                                    p.stack.join(' ').toLowerCase().includes(query);
+                return matchCat && matchSearch;
+            });
+
+            grid.innerHTML = filtered.map(p => `
+                <div class="group bg-white dark:bg-darkCard border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-sky-500/60 transition flex flex-col justify-between shadow-sm hover:shadow-xl">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="${p.img}" alt="${p.title}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-sm text-sky-400 text-[11px] font-mono font-semibold">
+                                #${String(p.id).padStart(2, '0')} • ${p.industry}
+                            </div>
+                            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-500/90 text-slate-950 text-[11px] font-mono font-bold">
+                                ${p.score}
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-sky-500 transition leading-snug mb-2">
+                                ${p.title}
+                            </h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed mb-4">
+                                ${p.overview}
+                            </p>
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/70 border border-slate-200/80 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 mb-4">
+                                <span class="text-emerald-500 font-bold">📈 Impact:</span> ${p.impact}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+                        <div class="flex flex-wrap gap-1">
+                            ${p.stack.slice(0, 3).map(s => `<span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-[10px] font-mono text-slate-600 dark:text-slate-300">${s}</span>`).join('')}
+                        </div>
+                        <button onclick="openModal(${p.id})" class="text-xs font-mono font-bold text-sky-500 hover:text-sky-400 flex items-center gap-1">
+                            Read Full Case Study →
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openModal(id) {
+            const p = PROJECTS.find(x => x.id === id);
+            if (!p) return;
+            document.getElementById('mIndustry').textContent = p.industry;
+            document.getElementById('mScore').textContent = p.score;
+            document.getElementById('mEffort').textContent = p.effort;
+            document.getElementById('mTitle').textContent = p.title;
+            document.getElementById('mImage').src = p.img;
+            document.getElementById('mImpactBanner').textContent = "📈 " + p.impact;
+            document.getElementById('mUsers').textContent = p.users;
+            document.getElementById('mStack').innerHTML = p.stack.map(s => `<span class="px-2.5 py-1 rounded bg-sky-500/10 border border-sky-500/20 text-sky-500 text-xs font-mono">${s}</span>`).join('');
+            document.getElementById('mOverview').textContent = p.overview;
+            document.getElementById('mData').textContent = p.data;
+            document.getElementById('mChallenges').textContent = p.challenges;
+            document.getElementById('mWalkthrough').textContent = p.walkthrough;
+            document.getElementById('mTakeaways').textContent = p.takeaways;
+            document.getElementById('mSql').textContent = p.sql;
+
+            document.getElementById('caseModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('caseModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Interactive ROI Simulator
+        function updateSimulator() {
+            const vol = parseFloat(document.getElementById('simVolume').value);
+            const leak = parseFloat(document.getElementById('simLeakage').value);
+            const rec = parseFloat(document.getElementById('simRecovery').value);
+
+            document.getElementById('volVal').textContent = `Rp ${vol} Billion`;
+            document.getElementById('leakVal').textContent = `${leak.toFixed(1)}%`;
+            document.getElementById('recVal').textContent = `${rec}%`;
+
+            const detected = vol * (leak / 100);
+            const savedMonthly = detected * (rec / 100);
+            const savedAnnual = savedMonthly * 12;
+
+            document.getElementById('outDetected').textContent = `Rp ${detected.toFixed(2)} B`;
+            document.getElementById('outSavedMonthly').textContent = `Rp ${savedMonthly.toFixed(2)} B`;
+            document.getElementById('outSavedAnnual').textContent = `Rp ${savedAnnual.toFixed(2)} B / yr`;
+        }
+
+        // Dark / Light Mode Switcher
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('themeIcon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                icon.textContent = '🌙 Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                icon.textContent = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Init
+        (function init() {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'light') {
+                document.documentElement.classList.remove('dark');
+                document.getElementById('themeIcon').textContent = '🌙 Dark';
+            }
+            renderProjects();
+            updateSimulator();
+        })();
+    </script>
 </body>
 </html>
